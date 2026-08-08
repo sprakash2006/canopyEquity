@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Temporary Files
+pyfiles.txt
+
+# Zip Files
+*.zip
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+dataset/
