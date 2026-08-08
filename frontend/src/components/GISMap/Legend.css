@@ -72,12 +72,12 @@
 
 .low{
 
-    background:var(--risk-low);
+    background:#7fa38f;
 
 }
 
 .verylow{
 
-    background:var(--brand-secondary-alt);
+    background:var(--risk-low);
 
 }

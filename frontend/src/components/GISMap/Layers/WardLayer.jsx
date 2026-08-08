@@ -69,10 +69,10 @@ export default function WardLayer({
                 return "#eab552";
 
             case "LOW":
-                return "#3e6752";
+                return "#7fa38f";
 
             case "VERY LOW":
-                return "#7fa38f";
+                return "#3e6752";
 
             default:
                 return "#717973";

@@ -12,8 +12,8 @@ const COLORS = [
     "#ba1a1a",
     "#f48c24",
     "#eab552",
-    "#3e6752",
-    "#7fa38f"
+    "#7fa38f",
+    "#3e6752"
 ];
 
 export default function LandCoverChart({
