@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 14018,
+        "budget": 3364320.0,
+        "cooling": "1.4\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 14006,
+        "budget": 3358535.0,
+        "cooling": "1.4\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13773,
+        "budget": 3292749.0,
+        "cooling": "1.38\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13662,
+        "budget": 3260752.0,
+        "cooling": "1.37\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13866,
+        "budget": 3320099.0,
+        "cooling": "1.39\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13493,
+        "budget": 3210665.0,
+        "cooling": "1.35\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13676,
+        "budget": 3265073.0,
+        "cooling": "1.37\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 12904,
+        "budget": 3048528.0,
+        "cooling": "1.29\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13581,
+        "budget": 3236868.0,
+        "cooling": "1.36\u00b0C"
+    },
+    {
+        "name": "Unknown",
+        "priority": "VERY HIGH",
+        "score": 0.0,
+        "trees": 13343,
+        "budget": 3170690.0,
+        "cooling": "1.33\u00b0C"
+    }
+]

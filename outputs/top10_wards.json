@@ -1,0 +1,72 @@
+[
+    {
+        "Rank": 1,
+        "ward_name": "BAZAR SITA RAM",
+        "Composite_Score": 88.51791723012427,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.20039548022599
+    },
+    {
+        "Rank": 2,
+        "ward_name": "SHAHDARA",
+        "Composite_Score": 88.05899871703957,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.2861458971889
+    },
+    {
+        "Rank": 3,
+        "ward_name": "KABIR NAGAR",
+        "Composite_Score": 87.28247410000583,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.25372572632847
+    },
+    {
+        "Rank": 4,
+        "ward_name": "ANARKALI",
+        "Composite_Score": 86.46600058816583,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.570842994369
+    },
+    {
+        "Rank": 5,
+        "ward_name": "MAUJPUR",
+        "Composite_Score": 85.74019151406692,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 77.56766806271477
+    },
+    {
+        "Rank": 6,
+        "ward_name": "JAGAT PURI",
+        "Composite_Score": 85.58165847918728,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.19384268682757
+    },
+    {
+        "Rank": 7,
+        "ward_name": "JOHARIPUR",
+        "Composite_Score": 84.84006229684856,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 75.29865418485336
+    },
+    {
+        "Rank": 8,
+        "ward_name": "SABOLI",
+        "Composite_Score": 83.98251816478904,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 73.59277080154911
+    },
+    {
+        "Rank": 9,
+        "ward_name": "ROHTASH NAGAR",
+        "Composite_Score": 83.39319958989739,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 74.87537335057061
+    },
+    {
+        "Rank": 10,
+        "ward_name": "RAM NAGAR EAST",
+        "Composite_Score": 83.27219073720532,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 75.09741532510976
+    }
+]

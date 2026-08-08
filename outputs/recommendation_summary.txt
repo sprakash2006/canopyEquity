@@ -1,0 +1,147 @@
+======================================================================
+CANOPY AI - TREE PLANTATION RECOMMENDATION REPORT
+======================================================================
+
+Total Wards Analysed : 250
+Top Recommendations  : 10
+
+1. FATEH NAGAR
+   Ward Number           : 100
+   Environment Score     : 37.90
+   Social Score          : nan
+   Feasibility Score     : 57.31
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+2. MOHAN GARDEN
+   Ward Number           : 113
+   Environment Score     : 52.67
+   Social Score          : nan
+   Feasibility Score     : 72.00
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : Highly Feasible
+
+3. UTTAM NAGAR
+   Ward Number           : 115
+   Environment Score     : 64.19
+   Social Score          : nan
+   Feasibility Score     : 66.96
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+4. BINDA PUR
+   Ward Number           : 116
+   Environment Score     : 60.98
+   Social Score          : nan
+   Feasibility Score     : 51.29
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+5. MALKA GANJ
+   Ward Number           : 12
+   Environment Score     : 31.46
+   Social Score          : nan
+   Feasibility Score     : 88.80
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : Highly Feasible
+
+6. MUKHERJEE NAGAR
+   Ward Number           : 13
+   Environment Score     : 37.55
+   Social Score          : nan
+   Feasibility Score     : 85.81
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : Highly Feasible
+
+7. DWARKA-C
+   Ward Number           : 130
+   Environment Score     : 44.17
+   Social Score          : nan
+   Feasibility Score     : 63.27
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+8. KAPASHERA
+   Ward Number           : 132
+   Environment Score     : 37.47
+   Social Score          : nan
+   Feasibility Score     : 47.79
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+9. RAJ NAGAR
+   Ward Number           : 134
+   Environment Score     : 61.62
+   Social Score          : nan
+   Feasibility Score     : 43.37
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
+10. PALAM
+   Ward Number           : 135
+   Environment Score     : 52.66
+   Social Score          : nan
+   Feasibility Score     : 66.95
+   Urban Vulnerability   : nan
+   TPIS                  : nan
+   Priority              : LOW
+   Estimated Trees       : 0
+   Estimated Cost        : ₹0
+   Estimated CO₂ (10Y)   : 0.00 Tons
+   Temperature Reduction : 0.00 °C
+   Reason                : General Greening Opportunity
+
