@@ -1,0 +1,1752 @@
+[
+    {
+        "ward_name": "SHAHDARA",
+        "Rank": 1,
+        "Composite_Score": 89.0832951644289,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 87.5583720217239
+    },
+    {
+        "ward_name": "BAZAR SITA RAM",
+        "Rank": 2,
+        "Composite_Score": 89.068407903324,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 87.81040254237288
+    },
+    {
+        "ward_name": "KABIR NAGAR",
+        "Rank": 3,
+        "Composite_Score": 88.71097244325915,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 87.05980919765166
+    },
+    {
+        "ward_name": "MAUJPUR",
+        "Rank": 4,
+        "Composite_Score": 88.11083097840634,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 86.45619899054982
+    },
+    {
+        "ward_name": "JOHARIPUR",
+        "Rank": 5,
+        "Composite_Score": 88.0062985909918,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 85.49886098130841
+    },
+    {
+        "ward_name": "SABOLI",
+        "Rank": 6,
+        "Composite_Score": 87.805198812752,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.79051188627405
+    },
+    {
+        "ward_name": "ANARKALI",
+        "Rank": 7,
+        "Composite_Score": 87.78302080994035,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 86.6764105112068
+    },
+    {
+        "ward_name": "JAGAT PURI",
+        "Rank": 8,
+        "Composite_Score": 87.40020190926731,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 85.99901851492827
+    },
+    {
+        "ward_name": "ROHTASH NAGAR",
+        "Rank": 9,
+        "Composite_Score": 86.50183041600913,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.37235263955769
+    },
+    {
+        "ward_name": "GORAKH PARK",
+        "Rank": 10,
+        "Composite_Score": 86.44004795287724,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.05096751900484
+    },
+    {
+        "ward_name": "CHAUHAN BANGER",
+        "Rank": 11,
+        "Composite_Score": 86.31383432859356,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.938852663707
+    },
+    {
+        "ward_name": "RAM NAGAR EAST",
+        "Rank": 12,
+        "Composite_Score": 86.18501485834992,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.1823188898181
+    },
+    {
+        "ward_name": "AZAD NAGAR",
+        "Rank": 13,
+        "Composite_Score": 86.16535415635947,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.16595547309834
+    },
+    {
+        "ward_name": "SUBHASH MOHALLA",
+        "Rank": 14,
+        "Composite_Score": 85.83172903477202,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 84.12578475336323
+    },
+    {
+        "ward_name": "SUNDAR NAGRI",
+        "Rank": 15,
+        "Composite_Score": 85.29010577375469,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 83.7030931122449
+    },
+    {
+        "ward_name": "MUSTAFABAD",
+        "Rank": 16,
+        "Composite_Score": 85.04629233318491,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 83.6865479390681
+    },
+    {
+        "ward_name": "JAMA MASJID",
+        "Rank": 17,
+        "Composite_Score": 85.04428976648568,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 82.37964007383101
+    },
+    {
+        "ward_name": "ASHOK NAGAR",
+        "Rank": 18,
+        "Composite_Score": 84.87756806019704,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 82.27912721757515
+    },
+    {
+        "ward_name": "KARDAM PURI",
+        "Rank": 19,
+        "Composite_Score": 84.78251310223277,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.19417071478141
+    },
+    {
+        "ward_name": "SEELAMPUR",
+        "Rank": 20,
+        "Composite_Score": 84.58281053750363,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.84359440183017
+    },
+    {
+        "ward_name": "CHANDANI MAHAL",
+        "Rank": 21,
+        "Composite_Score": 84.3743591942872,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.79860209381594
+    },
+    {
+        "ward_name": "MANDAWALI",
+        "Rank": 22,
+        "Composite_Score": 84.26676146536225,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.53977093518372
+    },
+    {
+        "ward_name": "SADAR BAZAR",
+        "Rank": 23,
+        "Composite_Score": 84.24988003180293,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.13856407857811
+    },
+    {
+        "ward_name": "BHALSWA",
+        "Rank": 24,
+        "Composite_Score": 84.16615828713562,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.44248707574737
+    },
+    {
+        "ward_name": "LAXMI NAGAR",
+        "Rank": 25,
+        "Composite_Score": 84.0054174264195,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 82.36615835485794
+    },
+    {
+        "ward_name": "QURAISH NAGAR",
+        "Rank": 26,
+        "Composite_Score": 83.83258701999718,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.28502562028048
+    },
+    {
+        "ward_name": "BRIJ PURI",
+        "Rank": 27,
+        "Composite_Score": 83.71986003393125,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.91793965809073
+    },
+    {
+        "ward_name": "VISHWAS NAGAR",
+        "Rank": 28,
+        "Composite_Score": 83.71849432553051,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.63474801061008
+    },
+    {
+        "ward_name": "BALLIMARAN",
+        "Rank": 29,
+        "Composite_Score": 83.59152365490817,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.74260092412452
+    },
+    {
+        "ward_name": "VINOD NAGAR",
+        "Rank": 30,
+        "Composite_Score": 83.44728281799621,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.45311430527036
+    },
+    {
+        "ward_name": "GHONDA",
+        "Rank": 31,
+        "Composite_Score": 83.16251438176407,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.92380681818182
+    },
+    {
+        "ward_name": "NEHRU VIHAR",
+        "Rank": 32,
+        "Composite_Score": 82.82317333184393,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.45886941910706
+    },
+    {
+        "ward_name": "AZADPUR",
+        "Rank": 33,
+        "Composite_Score": 82.80140789003177,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.38154515327258
+    },
+    {
+        "ward_name": "KARAWAL NAGAR-EAST",
+        "Rank": 34,
+        "Composite_Score": 82.55735468930705,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 81.00080588137426
+    },
+    {
+        "ward_name": "JHILMIL",
+        "Rank": 35,
+        "Composite_Score": 82.41857953600824,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.77017037647705
+    },
+    {
+        "ward_name": "GOKAL PURI",
+        "Rank": 36,
+        "Composite_Score": 82.38654142152478,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.69769583764219
+    },
+    {
+        "ward_name": "DILSHAD COLONY",
+        "Rank": 37,
+        "Composite_Score": 82.17955502012398,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.30507377369553
+    },
+    {
+        "ward_name": "WELCOME COLONY",
+        "Rank": 38,
+        "Composite_Score": 82.1355132382608,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.72682760599756
+    },
+    {
+        "ward_name": "HARSH VIHAR",
+        "Rank": 39,
+        "Composite_Score": 82.07725626391846,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.28674030387845
+    },
+    {
+        "ward_name": "DAYALPUR",
+        "Rank": 40,
+        "Composite_Score": 82.04812092561254,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.31461063508064
+    },
+    {
+        "ward_name": "RAM NAGAR",
+        "Rank": 41,
+        "Composite_Score": 81.90513439942964,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 80.0799219228414
+    },
+    {
+        "ward_name": "KARAWAL NAGAR-WEST",
+        "Rank": 42,
+        "Composite_Score": 81.80094788603151,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.46671941609611
+    },
+    {
+        "ward_name": "SRI RAM COLONY",
+        "Rank": 43,
+        "Composite_Score": 81.67142637150106,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.3623660922217
+    },
+    {
+        "ward_name": "SANGAM PARK",
+        "Rank": 44,
+        "Composite_Score": 81.53055051375631,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.18295606888728
+    },
+    {
+        "ward_name": "SADATPUR",
+        "Rank": 45,
+        "Composite_Score": 81.2687338361433,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.58476181883796
+    },
+    {
+        "ward_name": "SANGAM VIHAR-A",
+        "Rank": 46,
+        "Composite_Score": 80.68915012442285,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 77.67337289568219
+    },
+    {
+        "ward_name": "KALYANPURI",
+        "Rank": 47,
+        "Composite_Score": 80.63935198532464,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.87647682178932
+    },
+    {
+        "ward_name": "RAJ NAGAR",
+        "Rank": 48,
+        "Composite_Score": 80.63134031360782,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 79.16473345588236
+    },
+    {
+        "ward_name": "RANJEET NAGAR",
+        "Rank": 49,
+        "Composite_Score": 80.23146962042269,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.30695803295572
+    },
+    {
+        "ward_name": "GEETA COLONY",
+        "Rank": 50,
+        "Composite_Score": 80.1718794368025,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 77.01457937262357
+    },
+    {
+        "ward_name": "SADH NAGAR",
+        "Rank": 51,
+        "Composite_Score": 80.14047890166154,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 78.70755523712674
+    },
+    {
+        "ward_name": "GOVIND PURI",
+        "Rank": 52,
+        "Composite_Score": 80.05452267727745,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 77.0999190700412
+    },
+    {
+        "ward_name": "SHAKARPUR",
+        "Rank": 53,
+        "Composite_Score": 80.02178923836554,
+        "Priority": "VERY HIGH",
+        "Impact_Mean": 77.15507154882155
+    },
+    {
+        "ward_name": "SARUP NAGAR",
+        "Rank": 54,
+        "Composite_Score": 79.69283131301532,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.06999938936269
+    },
+    {
+        "ward_name": "SULTANPURI-B",
+        "Rank": 55,
+        "Composite_Score": 79.68212365967227,
+        "Priority": "HIGH",
+        "Impact_Mean": 77.3836036392405
+    },
+    {
+        "ward_name": "TRILOKPURI",
+        "Rank": 56,
+        "Composite_Score": 79.53990382213159,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.84663877668783
+    },
+    {
+        "ward_name": "BALJEET NAGAR",
+        "Rank": 57,
+        "Composite_Score": 79.47675531047526,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.7445611167002
+    },
+    {
+        "ward_name": "TIGRI",
+        "Rank": 58,
+        "Composite_Score": 79.4057232612102,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.0301901587924
+    },
+    {
+        "ward_name": "NANGLOI JAT",
+        "Rank": 59,
+        "Composite_Score": 79.39753301896292,
+        "Priority": "HIGH",
+        "Impact_Mean": 77.29761497483017
+    },
+    {
+        "ward_name": "MOTI NAGAR",
+        "Rank": 60,
+        "Composite_Score": 79.3889087034477,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.40644988146889
+    },
+    {
+        "ward_name": "MOLARBAND",
+        "Rank": 61,
+        "Composite_Score": 79.37050223272134,
+        "Priority": "HIGH",
+        "Impact_Mean": 75.82909815645242
+    },
+    {
+        "ward_name": "ADARSH NAGAR",
+        "Rank": 62,
+        "Composite_Score": 79.31080381859881,
+        "Priority": "HIGH",
+        "Impact_Mean": 75.29631147540984
+    },
+    {
+        "ward_name": "KISHAN GANJ",
+        "Rank": 63,
+        "Composite_Score": 79.24742776183862,
+        "Priority": "HIGH",
+        "Impact_Mean": 75.27970271829504
+    },
+    {
+        "ward_name": "VISHNU GARDEN",
+        "Rank": 64,
+        "Composite_Score": 79.18938611859036,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.1205946337926
+    },
+    {
+        "ward_name": "MAHAVIR ENCLAVE",
+        "Rank": 65,
+        "Composite_Score": 79.04570780152841,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.80658925105415
+    },
+    {
+        "ward_name": "SAMAYPUR BADLI",
+        "Rank": 66,
+        "Composite_Score": 79.02266070806728,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.6751742344245
+    },
+    {
+        "ward_name": "TILAK NAGAR",
+        "Rank": 67,
+        "Composite_Score": 78.99453507432226,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.77162927388717
+    },
+    {
+        "ward_name": "JAHANGIR PURI",
+        "Rank": 68,
+        "Composite_Score": 78.98296905492296,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.98831386406914
+    },
+    {
+        "ward_name": "RAMESH NAGAR",
+        "Rank": 69,
+        "Composite_Score": 78.91942424572309,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.11524566473989
+    },
+    {
+        "ward_name": "TRI NAGAR",
+        "Rank": 70,
+        "Composite_Score": 78.91260327388972,
+        "Priority": "HIGH",
+        "Impact_Mean": 75.59213471357627
+    },
+    {
+        "ward_name": "DABRI",
+        "Rank": 71,
+        "Composite_Score": 78.72348363498506,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.76330304996755
+    },
+    {
+        "ward_name": "RAGHUBIR NAGAR",
+        "Rank": 72,
+        "Composite_Score": 78.61364180899014,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.39528525255562
+    },
+    {
+        "ward_name": "ISAPUR",
+        "Rank": 73,
+        "Composite_Score": 78.6068462638704,
+        "Priority": "HIGH",
+        "Impact_Mean": 66.29534407673707
+    },
+    {
+        "ward_name": "MAHAVEER ENCLAVE",
+        "Rank": 74,
+        "Composite_Score": 78.51110741107816,
+        "Priority": "HIGH",
+        "Impact_Mean": 77.05153252001813
+    },
+    {
+        "ward_name": "DILSHAD GARDEN",
+        "Rank": 75,
+        "Composite_Score": 78.26863086442366,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.29449021308226
+    },
+    {
+        "ward_name": "NIHAL VIHAR",
+        "Rank": 76,
+        "Composite_Score": 78.1257721561739,
+        "Priority": "HIGH",
+        "Impact_Mean": 76.57677646720369
+    },
+    {
+        "ward_name": "ASHOK VIHAR",
+        "Rank": 77,
+        "Composite_Score": 78.1149316443188,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.5258894044857
+    },
+    {
+        "ward_name": "HARKESH NAGAR",
+        "Rank": 78,
+        "Composite_Score": 78.06014173222519,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.96058961232733
+    },
+    {
+        "ward_name": "YAMUNA VIHAR",
+        "Rank": 79,
+        "Composite_Score": 77.72833109622164,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.77878397632617
+    },
+    {
+        "ward_name": "NAND NAGRI",
+        "Rank": 80,
+        "Composite_Score": 77.70704950569815,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.54142501504623
+    },
+    {
+        "ward_name": "PAHAR GANJ",
+        "Rank": 81,
+        "Composite_Score": 77.41143785382954,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.00847905330446
+    },
+    {
+        "ward_name": "KRISHNA NAGAR",
+        "Rank": 82,
+        "Composite_Score": 77.32677501069139,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.6081780762565
+    },
+    {
+        "ward_name": "I.P. EXTENSION",
+        "Rank": 83,
+        "Composite_Score": 77.03709101139368,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.99535361175644
+    },
+    {
+        "ward_name": "GANDHI NAGAR",
+        "Rank": 84,
+        "Composite_Score": 77.00604479747571,
+        "Priority": "HIGH",
+        "Impact_Mean": 71.85297457417921
+    },
+    {
+        "ward_name": "AMAN VIHAR",
+        "Rank": 85,
+        "Composite_Score": 76.95491058082064,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.9890374142443
+    },
+    {
+        "ward_name": "HASTSAL",
+        "Rank": 86,
+        "Composite_Score": 76.91386538255745,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.60082697201018
+    },
+    {
+        "ward_name": "MANGOLPURI-B",
+        "Rank": 87,
+        "Composite_Score": 76.75220657920121,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.46630562465451
+    },
+    {
+        "ward_name": "CHAUKHANDI NAGAR",
+        "Rank": 88,
+        "Composite_Score": 76.72174199755175,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.84127158970743
+    },
+    {
+        "ward_name": "MADHU VIHAR",
+        "Rank": 89,
+        "Composite_Score": 76.68910147995668,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.92516148566814
+    },
+    {
+        "ward_name": "UTTAM NAGAR",
+        "Rank": 90,
+        "Composite_Score": 76.54529828415222,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.72417528890084
+    },
+    {
+        "ward_name": "KIRARI",
+        "Rank": 91,
+        "Composite_Score": 76.47325299116099,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.5515971391121
+    },
+    {
+        "ward_name": "NARAINA",
+        "Rank": 92,
+        "Composite_Score": 76.44408103764323,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.45906573329744
+    },
+    {
+        "ward_name": "PREM NAGAR",
+        "Rank": 93,
+        "Composite_Score": 76.29400595286683,
+        "Priority": "HIGH",
+        "Impact_Mean": 75.08933302878026
+    },
+    {
+        "ward_name": "DEV NAGAR",
+        "Rank": 94,
+        "Composite_Score": 76.10891426051118,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.34382497131533
+    },
+    {
+        "ward_name": "BUDH VIHAR",
+        "Rank": 95,
+        "Composite_Score": 75.9462621880227,
+        "Priority": "HIGH",
+        "Impact_Mean": 74.09366408541055
+    },
+    {
+        "ward_name": "BINDA PUR",
+        "Rank": 96,
+        "Composite_Score": 75.87469101674897,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.85899787817169
+    },
+    {
+        "ward_name": "HARI NAGAR",
+        "Rank": 97,
+        "Composite_Score": 75.78490225589849,
+        "Priority": "HIGH",
+        "Impact_Mean": 71.22001738607108
+    },
+    {
+        "ward_name": "NAWADA",
+        "Rank": 98,
+        "Composite_Score": 75.7440760245575,
+        "Priority": "HIGH",
+        "Impact_Mean": 73.50549548744527
+    },
+    {
+        "ward_name": "SAGARPUR",
+        "Rank": 99,
+        "Composite_Score": 75.70580366876374,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.83581883457609
+    },
+    {
+        "ward_name": "MANGOL PURI",
+        "Rank": 100,
+        "Composite_Score": 75.58085049863487,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.54345984943538
+    },
+    {
+        "ward_name": "ANAND VIHAR",
+        "Rank": 101,
+        "Composite_Score": 75.22968607730232,
+        "Priority": "HIGH",
+        "Impact_Mean": 70.69062344494206
+    },
+    {
+        "ward_name": "SULTANPURI-A",
+        "Rank": 102,
+        "Composite_Score": 74.97177227372302,
+        "Priority": "HIGH",
+        "Impact_Mean": 70.94819661210506
+    },
+    {
+        "ward_name": "MADANGIR",
+        "Rank": 103,
+        "Composite_Score": 74.93830009858577,
+        "Priority": "HIGH",
+        "Impact_Mean": 72.04594394576013
+    },
+    {
+        "ward_name": "SAINIK ENCLAVE",
+        "Rank": 104,
+        "Composite_Score": 74.78942020966082,
+        "Priority": "HIGH",
+        "Impact_Mean": 71.56385073808953
+    },
+    {
+        "ward_name": "CHHAWALA",
+        "Rank": 105,
+        "Composite_Score": 74.34665855501582,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.8571459814106
+    },
+    {
+        "ward_name": "KAROL BAGH",
+        "Rank": 106,
+        "Composite_Score": 74.32703707384229,
+        "Priority": "HIGH",
+        "Impact_Mean": 70.21653112892707
+    },
+    {
+        "ward_name": "PALAM",
+        "Rank": 107,
+        "Composite_Score": 73.98333013055446,
+        "Priority": "HIGH",
+        "Impact_Mean": 70.40633562466952
+    },
+    {
+        "ward_name": "RAJOURI GARDEN",
+        "Rank": 108,
+        "Composite_Score": 73.7728512336844,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.77620815629591
+    },
+    {
+        "ward_name": "SHAKUR PUR",
+        "Rank": 109,
+        "Composite_Score": 73.69329309931273,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.1438484583945
+    },
+    {
+        "ward_name": "SUBHASH NAGAR",
+        "Rank": 110,
+        "Composite_Score": 73.59276957138346,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.50671151061776
+    },
+    {
+        "ward_name": "WEST PATEL NAGAR",
+        "Rank": 111,
+        "Composite_Score": 73.53465782236765,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.19646881287726
+    },
+    {
+        "ward_name": "KESHOPUR",
+        "Rank": 112,
+        "Composite_Score": 73.43436259673149,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.73158712588871
+    },
+    {
+        "ward_name": "PREET VIHAR",
+        "Rank": 113,
+        "Composite_Score": 73.33270729565542,
+        "Priority": "HIGH",
+        "Impact_Mean": 68.0996274195014
+    },
+    {
+        "ward_name": "EAST PATEL NAGAR",
+        "Rank": 114,
+        "Composite_Score": 73.27364856929489,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.02907575420238
+    },
+    {
+        "ward_name": "KOTLA MUBARAKPUR",
+        "Rank": 115,
+        "Composite_Score": 73.25355747210126,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.0690224021293
+    },
+    {
+        "ward_name": "KARAM PURA",
+        "Rank": 116,
+        "Composite_Score": 73.18837588534728,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.47268068588025
+    },
+    {
+        "ward_name": "MANGLAPURI",
+        "Rank": 117,
+        "Composite_Score": 73.04146293840881,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.5244931378665
+    },
+    {
+        "ward_name": "MODEL TOWN",
+        "Rank": 118,
+        "Composite_Score": 72.95434145523133,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.33506445983224
+    },
+    {
+        "ward_name": "MAYUR VIHAR PHASE-I",
+        "Rank": 119,
+        "Composite_Score": 72.7908035960024,
+        "Priority": "HIGH",
+        "Impact_Mean": 68.14561106407
+    },
+    {
+        "ward_name": "MANGOLPURI-A",
+        "Rank": 120,
+        "Composite_Score": 72.77310182716886,
+        "Priority": "HIGH",
+        "Impact_Mean": 68.54792549969716
+    },
+    {
+        "ward_name": "MADIPUR",
+        "Rank": 121,
+        "Composite_Score": 72.6958649145909,
+        "Priority": "HIGH",
+        "Impact_Mean": 69.1023223035103
+    },
+    {
+        "ward_name": "KESHAV PURAM",
+        "Rank": 122,
+        "Composite_Score": 72.52784479339073,
+        "Priority": "HIGH",
+        "Impact_Mean": 66.31111170535173
+    },
+    {
+        "ward_name": "NEW ASHOK NAGAR",
+        "Rank": 123,
+        "Composite_Score": 72.09763266747362,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.21203287564583
+    },
+    {
+        "ward_name": "SANT NAGAR",
+        "Rank": 124,
+        "Composite_Score": 71.80668436587348,
+        "Priority": "HIGH",
+        "Impact_Mean": 68.20136764165953
+    },
+    {
+        "ward_name": "ROHINI-F",
+        "Rank": 125,
+        "Composite_Score": 71.7797555854238,
+        "Priority": "HIGH",
+        "Impact_Mean": 68.34577126267193
+    },
+    {
+        "ward_name": "SANGAM VIHAR-C",
+        "Rank": 126,
+        "Composite_Score": 71.7191055994852,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.88384686134744
+    },
+    {
+        "ward_name": "SHAHBAAD DAIRY",
+        "Rank": 127,
+        "Composite_Score": 71.62250353359352,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.16245778580266
+    },
+    {
+        "ward_name": "MAYUR VIHAR PHASE-II",
+        "Rank": 128,
+        "Composite_Score": 71.60861852780124,
+        "Priority": "HIGH",
+        "Impact_Mean": 64.97412094574113
+    },
+    {
+        "ward_name": "VIKAS NAGAR",
+        "Rank": 129,
+        "Composite_Score": 71.47996971726006,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.42917715087583
+    },
+    {
+        "ward_name": "DELHI GATE",
+        "Rank": 130,
+        "Composite_Score": 71.36864736228333,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.47124809869867
+    },
+    {
+        "ward_name": "ROHINI-C",
+        "Rank": 131,
+        "Composite_Score": 71.29862133123738,
+        "Priority": "HIGH",
+        "Impact_Mean": 67.33472581534416
+    },
+    {
+        "ward_name": "SHASTRI NAGAR",
+        "Rank": 132,
+        "Composite_Score": 71.29351952894704,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.32224494706449
+    },
+    {
+        "ward_name": "JAWALAPURI",
+        "Rank": 133,
+        "Composite_Score": 71.2422171911793,
+        "Priority": "HIGH",
+        "Impact_Mean": 66.25413701067616
+    },
+    {
+        "ward_name": "NANGAL THAKRAN",
+        "Rank": 134,
+        "Composite_Score": 71.22745685403015,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.32847932695961
+    },
+    {
+        "ward_name": "SHASTRI PARK",
+        "Rank": 135,
+        "Composite_Score": 70.99294466324244,
+        "Priority": "HIGH",
+        "Impact_Mean": 64.34666562045724
+    },
+    {
+        "ward_name": "NAJAFGARH",
+        "Rank": 136,
+        "Composite_Score": 70.92056849355221,
+        "Priority": "HIGH",
+        "Impact_Mean": 66.59994659929963
+    },
+    {
+        "ward_name": "DICHAON KALAN",
+        "Rank": 137,
+        "Composite_Score": 70.54776999272048,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.51248279182116
+    },
+    {
+        "ward_name": "BAKHTAWARPUR",
+        "Rank": 138,
+        "Composite_Score": 70.29027274953337,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.95645929397536
+    },
+    {
+        "ward_name": "KANJHAWALA",
+        "Rank": 139,
+        "Composite_Score": 70.27001790745057,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.39379159260943
+    },
+    {
+        "ward_name": "PUNJABI BAGH",
+        "Rank": 140,
+        "Composite_Score": 70.14775331129741,
+        "Priority": "HIGH",
+        "Impact_Mean": 64.7400296324489
+    },
+    {
+        "ward_name": "ALIPUR",
+        "Rank": 141,
+        "Composite_Score": 70.10104736492424,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.84762672844847
+    },
+    {
+        "ward_name": "POOTH KALAN",
+        "Rank": 142,
+        "Composite_Score": 69.96446411502238,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.31047886261811
+    },
+    {
+        "ward_name": "NANGLOI",
+        "Rank": 143,
+        "Composite_Score": 69.68147854376728,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.960607971177666
+    },
+    {
+        "ward_name": "KAMLA NAGAR",
+        "Rank": 144,
+        "Composite_Score": 69.40334740941194,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.38339367470858
+    },
+    {
+        "ward_name": "MAHIPALPUR",
+        "Rank": 145,
+        "Composite_Score": 69.31493415307007,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.36127025699787
+    },
+    {
+        "ward_name": "NARELA",
+        "Rank": 146,
+        "Composite_Score": 69.13462851914258,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.83919504913817
+    },
+    {
+        "ward_name": "ROSHAN PURA",
+        "Rank": 147,
+        "Composite_Score": 69.0933629906755,
+        "Priority": "HIGH",
+        "Impact_Mean": 64.10412201154163
+    },
+    {
+        "ward_name": "CHANDNI CHOWK",
+        "Rank": 148,
+        "Composite_Score": 69.01772344415967,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.52844423617619
+    },
+    {
+        "ward_name": "TUGHLAKABAD",
+        "Rank": 149,
+        "Composite_Score": 68.81169531039023,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.23018259602567
+    },
+    {
+        "ward_name": "MATIALA",
+        "Rank": 150,
+        "Composite_Score": 68.66236117205179,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.622827192455276
+    },
+    {
+        "ward_name": "JANAK PURI WEST",
+        "Rank": 151,
+        "Composite_Score": 68.60305887590408,
+        "Priority": "HIGH",
+        "Impact_Mean": 64.19819815799808
+    },
+    {
+        "ward_name": "MOHAN GARDEN",
+        "Rank": 152,
+        "Composite_Score": 68.57701937060645,
+        "Priority": "HIGH",
+        "Impact_Mean": 65.00420548309822
+    },
+    {
+        "ward_name": "BADARPUR",
+        "Rank": 153,
+        "Composite_Score": 68.4782297544933,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.63068942436412
+    },
+    {
+        "ward_name": "BANKNER",
+        "Rank": 154,
+        "Composite_Score": 68.43917021876716,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.231316633620196
+    },
+    {
+        "ward_name": "VIKAS PURI",
+        "Rank": 155,
+        "Composite_Score": 68.22268818470737,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.30454553814463
+    },
+    {
+        "ward_name": "PUL PEHLADPUR",
+        "Rank": 156,
+        "Composite_Score": 68.21496430970441,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.936610079185726
+    },
+    {
+        "ward_name": "GURU HARKISHAN NAGAR",
+        "Rank": 157,
+        "Composite_Score": 68.05113997868672,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.798627700127064
+    },
+    {
+        "ward_name": "BEGUMPUR",
+        "Rank": 158,
+        "Composite_Score": 67.9499572086589,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.18308000170307
+    },
+    {
+        "ward_name": "AMAR COLONY",
+        "Rank": 159,
+        "Composite_Score": 67.8213524512584,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.99735558088183
+    },
+    {
+        "ward_name": "TIMARPUR",
+        "Rank": 160,
+        "Composite_Score": 67.7188128264836,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.26411666801981
+    },
+    {
+        "ward_name": "VIJAY VIHAR",
+        "Rank": 161,
+        "Composite_Score": 67.62403392715221,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.76597767419038
+    },
+    {
+        "ward_name": "KHYALA",
+        "Rank": 162,
+        "Composite_Score": 67.59365602806407,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.23747154934157
+    },
+    {
+        "ward_name": "KOHAT ENCLAVE",
+        "Rank": 163,
+        "Composite_Score": 67.53492592860727,
+        "Priority": "HIGH",
+        "Impact_Mean": 63.15149758815391
+    },
+    {
+        "ward_name": "KADIPUR",
+        "Rank": 164,
+        "Composite_Score": 67.4675182929385,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.800708726964466
+    },
+    {
+        "ward_name": "SHALIMAR BAGH-B",
+        "Rank": 165,
+        "Composite_Score": 67.33355973992342,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.87150695314045
+    },
+    {
+        "ward_name": "BURARI",
+        "Rank": 166,
+        "Composite_Score": 67.21997613576318,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.25928207875703
+    },
+    {
+        "ward_name": "POOTH KHURD",
+        "Rank": 167,
+        "Composite_Score": 67.19171851688746,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.41933635295222
+    },
+    {
+        "ward_name": "KAKROLA",
+        "Rank": 168,
+        "Composite_Score": 67.16211459690103,
+        "Priority": "HIGH",
+        "Impact_Mean": 62.60693271057994
+    },
+    {
+        "ward_name": "JANAK PURI SOUTH",
+        "Rank": 169,
+        "Composite_Score": 67.11652897449561,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.560637302998714
+    },
+    {
+        "ward_name": "LAJPAT NAGAR",
+        "Rank": 170,
+        "Composite_Score": 67.10711194909166,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.18046078865751
+    },
+    {
+        "ward_name": "NANGLI SAKRAWATI",
+        "Rank": 171,
+        "Composite_Score": 67.05966272186735,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.53370449892645
+    },
+    {
+        "ward_name": "RANI KHERA",
+        "Rank": 172,
+        "Composite_Score": 66.97813999919518,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.84525071257319
+    },
+    {
+        "ward_name": "INDER PURI",
+        "Rank": 173,
+        "Composite_Score": 66.86698751446576,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.684599444185636
+    },
+    {
+        "ward_name": "BAPROLA",
+        "Rank": 174,
+        "Composite_Score": 66.64556524267735,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.61840658638235
+    },
+    {
+        "ward_name": "BAWANA",
+        "Rank": 175,
+        "Composite_Score": 66.64142266939862,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.97475926549577
+    },
+    {
+        "ward_name": "FATEH NAGAR",
+        "Rank": 176,
+        "Composite_Score": 66.60083282136212,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.96429991095847
+    },
+    {
+        "ward_name": "SHALIMAR BAGH-A",
+        "Rank": 177,
+        "Composite_Score": 66.58217320221725,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.5524610536594
+    },
+    {
+        "ward_name": "HOLAMBI KALAN",
+        "Rank": 178,
+        "Composite_Score": 66.3525954996875,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.000113997231495
+    },
+    {
+        "ward_name": "MADANPUR KHADAR WEST",
+        "Rank": 179,
+        "Composite_Score": 66.12825715166797,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.484599135390056
+    },
+    {
+        "ward_name": "MUNDKA",
+        "Rank": 180,
+        "Composite_Score": 66.07267684145336,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.97359139784946
+    },
+    {
+        "ward_name": "RITHALA",
+        "Rank": 181,
+        "Composite_Score": 65.97503200835641,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.04273567650403
+    },
+    {
+        "ward_name": "GAUTAM PURI",
+        "Rank": 182,
+        "Composite_Score": 65.96020345917205,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.998181067623
+    },
+    {
+        "ward_name": "PASCHIM VIHAR",
+        "Rank": 183,
+        "Composite_Score": 65.89276246293423,
+        "Priority": "HIGH",
+        "Impact_Mean": 61.210941713995624
+    },
+    {
+        "ward_name": "ROHINI-E",
+        "Rank": 184,
+        "Composite_Score": 65.7962320691735,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.80711610486891
+    },
+    {
+        "ward_name": "JHARODA",
+        "Rank": 185,
+        "Composite_Score": 65.68796990055321,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.82644344734169
+    },
+    {
+        "ward_name": "MUBARIKPUR",
+        "Rank": 186,
+        "Composite_Score": 65.65847306630714,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.756786705785856
+    },
+    {
+        "ward_name": "KALKAJI",
+        "Rank": 187,
+        "Composite_Score": 65.57804232962619,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.323959682770386
+    },
+    {
+        "ward_name": "ABUL FAZAL ENCLAVE",
+        "Rank": 188,
+        "Composite_Score": 65.4689979531527,
+        "Priority": "HIGH",
+        "Impact_Mean": 59.601032381981334
+    },
+    {
+        "ward_name": "MUKHERJEE NAGAR",
+        "Rank": 189,
+        "Composite_Score": 65.32304203050397,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.87525947920225
+    },
+    {
+        "ward_name": "PITAM PURA",
+        "Rank": 190,
+        "Composite_Score": 65.2901826836806,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.792381579947794
+    },
+    {
+        "ward_name": "WAZIR PUR",
+        "Rank": 191,
+        "Composite_Score": 65.17845791558203,
+        "Priority": "HIGH",
+        "Impact_Mean": 58.24045822006009
+    },
+    {
+        "ward_name": "ROHINI-A",
+        "Rank": 192,
+        "Composite_Score": 65.15802093417845,
+        "Priority": "HIGH",
+        "Impact_Mean": 60.99228991794775
+    },
+    {
+        "ward_name": "NITHARI",
+        "Rank": 193,
+        "Composite_Score": 64.72756929374319,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 59.58184388569121
+    },
+    {
+        "ward_name": "SARASWATI VIHAR",
+        "Rank": 194,
+        "Composite_Score": 64.60732808075974,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 59.39824612262647
+    },
+    {
+        "ward_name": "MUKUNDPUR",
+        "Rank": 195,
+        "Composite_Score": 64.55612708845064,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 57.86002368619693
+    },
+    {
+        "ward_name": "ANDREWS GANJ",
+        "Rank": 196,
+        "Composite_Score": 64.3503322060693,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 58.27755602102518
+    },
+    {
+        "ward_name": "SARITA VIHAR",
+        "Rank": 197,
+        "Composite_Score": 63.47595456940108,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 56.51007387814666
+    },
+    {
+        "ward_name": "MUNIRKA",
+        "Rank": 198,
+        "Composite_Score": 63.39204960333308,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 56.838304813603195
+    },
+    {
+        "ward_name": "KUNWAR SINGH NAGAR",
+        "Rank": 199,
+        "Composite_Score": 63.313978104462876,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 56.39940637411061
+    },
+    {
+        "ward_name": "NILOTHI",
+        "Rank": 200,
+        "Composite_Score": 63.010383571423226,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.42240757863065
+    },
+    {
+        "ward_name": "CHITARANJAN PARK",
+        "Rank": 201,
+        "Composite_Score": 62.98794595917991,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.30849849682664
+    },
+    {
+        "ward_name": "KONDLI",
+        "Rank": 202,
+        "Composite_Score": 62.896719807754266,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 56.80026632031906
+    },
+    {
+        "ward_name": "SRI NIWAS PURI",
+        "Rank": 203,
+        "Composite_Score": 62.87607273729232,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.73449760660969
+    },
+    {
+        "ward_name": "KHANPUR",
+        "Rank": 204,
+        "Composite_Score": 62.84654665971215,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.49897151606833
+    },
+    {
+        "ward_name": "ROHINI-D",
+        "Rank": 205,
+        "Composite_Score": 62.50589528515755,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.537755229083665
+    },
+    {
+        "ward_name": "BRAHAM PURI",
+        "Rank": 206,
+        "Composite_Score": 62.50116954049153,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 56.1891968547062
+    },
+    {
+        "ward_name": "MALKA GANJ",
+        "Rank": 207,
+        "Composite_Score": 62.36637186150581,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 54.51509579874373
+    },
+    {
+        "ward_name": "SIDHARTHA NAGAR",
+        "Rank": 208,
+        "Composite_Score": 62.30481403661492,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.86942862752798
+    },
+    {
+        "ward_name": "PUSHP VIHAR",
+        "Rank": 209,
+        "Composite_Score": 61.895019335902425,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 55.62683610559417
+    },
+    {
+        "ward_name": "DHIRPUR",
+        "Rank": 210,
+        "Composite_Score": 61.35142651630135,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 53.07336653926024
+    },
+    {
+        "ward_name": "PANDAV NAGAR",
+        "Rank": 211,
+        "Composite_Score": 61.31407407705797,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 53.13940765893228
+    },
+    {
+        "ward_name": "MALVIYA NAGAR",
+        "Rank": 212,
+        "Composite_Score": 60.87366609661432,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 54.549465989590864
+    },
+    {
+        "ward_name": "MADANPUR KHADAR EAST",
+        "Rank": 213,
+        "Composite_Score": 60.6770066408437,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 54.497655239327294
+    },
+    {
+        "ward_name": "TUGHLAKABAD EXTENSION",
+        "Rank": 214,
+        "Composite_Score": 60.598902089225625,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 53.03653059151332
+    },
+    {
+        "ward_name": "CIVIL LINES",
+        "Rank": 215,
+        "Composite_Score": 60.30263886767564,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 51.33079180296325
+    },
+    {
+        "ward_name": "DWARKA-B",
+        "Rank": 216,
+        "Composite_Score": 60.07201116528505,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 53.34732477994081
+    },
+    {
+        "ward_name": "BIJWASAN",
+        "Rank": 217,
+        "Composite_Score": 59.984235618777625,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 53.2914154888953
+    },
+    {
+        "ward_name": "DWARKA-C",
+        "Rank": 218,
+        "Composite_Score": 59.87139469612111,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 51.50005356071643
+    },
+    {
+        "ward_name": "DEOLI",
+        "Rank": 219,
+        "Composite_Score": 59.752935200954546,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 52.42500493388593
+    },
+    {
+        "ward_name": "RANI BAGH",
+        "Rank": 220,
+        "Composite_Score": 59.568405573883865,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 52.02442591634497
+    },
+    {
+        "ward_name": "SONIA VIHAR",
+        "Rank": 221,
+        "Composite_Score": 59.4763758073837,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 52.63570265405822
+    },
+    {
+        "ward_name": "PATPAR GANJ",
+        "Rank": 222,
+        "Composite_Score": 59.22911402725697,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 51.606946955535804
+    },
+    {
+        "ward_name": "R.K. PURAM",
+        "Rank": 223,
+        "Composite_Score": 58.75732479375474,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 51.9947842841956
+    },
+    {
+        "ward_name": "DWARKA-A",
+        "Rank": 224,
+        "Composite_Score": 58.41988943709418,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 49.86088431172157
+    },
+    {
+        "ward_name": "GREATER KAILASH",
+        "Rank": 225,
+        "Composite_Score": 58.0923143101133,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 50.993116349841586
+    },
+    {
+        "ward_name": "BHATI",
+        "Rank": 226,
+        "Composite_Score": 57.69756130875203,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 45.499355499789516
+    },
+    {
+        "ward_name": "SABAPUR",
+        "Rank": 227,
+        "Composite_Score": 56.77028217016328,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 50.80506165063831
+    },
+    {
+        "ward_name": "DARYAGANJ",
+        "Rank": 228,
+        "Composite_Score": 56.62823398412261,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 46.657704077217765
+    },
+    {
+        "ward_name": "ROHINI-B",
+        "Rank": 229,
+        "Composite_Score": 56.2547809982157,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 48.55544543077939
+    },
+    {
+        "ward_name": "SANGAM VIHAR-B",
+        "Rank": 230,
+        "Composite_Score": 56.002169427275206,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 48.28409606570767
+    },
+    {
+        "ward_name": "AYA NAGAR",
+        "Rank": 231,
+        "Composite_Score": 55.77491248784878,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 49.530559531263975
+    },
+    {
+        "ward_name": "ZAKIR NAGAR",
+        "Rank": 232,
+        "Composite_Score": 55.636774069493796,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 48.91334904836738
+    },
+    {
+        "ward_name": "SAID-UL-AJAIB",
+        "Rank": 233,
+        "Composite_Score": 55.35610604340076,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 45.093086437961134
+    },
+    {
+        "ward_name": "LALITA PARK",
+        "Rank": 234,
+        "Composite_Score": 52.69215142691424,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 43.84736714615786
+    },
+    {
+        "ward_name": "KAPASHERA",
+        "Rank": 235,
+        "Composite_Score": 52.30964279535621,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 45.71181735885309
+    },
+    {
+        "ward_name": "VASANT KUNJ",
+        "Rank": 236,
+        "Composite_Score": 52.16850031898657,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 41.38945977230696
+    },
+    {
+        "ward_name": "VASANT VIHAR",
+        "Rank": 237,
+        "Composite_Score": 51.71546311943871,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 44.76257363244317
+    },
+    {
+        "ward_name": "BHAJANPURA",
+        "Rank": 238,
+        "Composite_Score": 51.597129790979054,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 41.941291999614904
+    },
+    {
+        "ward_name": "RAJINDER NAGAR",
+        "Rank": 239,
+        "Composite_Score": 51.24558912764287,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 42.65514024745741
+    },
+    {
+        "ward_name": "DAKSHIN PURI",
+        "Rank": 240,
+        "Composite_Score": 51.115725266529296,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 44.44544747514027
+    },
+    {
+        "ward_name": "GREEN PARK",
+        "Rank": 241,
+        "Composite_Score": 51.097223115599114,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 43.20253807106599
+    },
+    {
+        "ward_name": "HARI NAGAR EXTENSION",
+        "Rank": 242,
+        "Composite_Score": 50.694748598244864,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 46.81942545572917
+    },
+    {
+        "ward_name": "CHIRAG DELHI",
+        "Rank": 243,
+        "Composite_Score": 49.97038143880384,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 42.83339594962072
+    },
+    {
+        "ward_name": "CHHATARPUR",
+        "Rank": 244,
+        "Composite_Score": 49.92400423186835,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 40.985293445783576
+    },
+    {
+        "ward_name": "MEHRAULI",
+        "Rank": 245,
+        "Composite_Score": 47.301952482537935,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 39.216988869878115
+    },
+    {
+        "ward_name": "HAUZ KHAS",
+        "Rank": 246,
+        "Composite_Score": 46.72433917172342,
+        "Priority": "MEDIUM",
+        "Impact_Mean": 38.612638268258735
+    },
+    {
+        "ward_name": "LADO SARAI",
+        "Rank": 247,
+        "Composite_Score": 42.88871799964053,
+        "Priority": "LOW",
+        "Impact_Mean": 33.868341120205
+    },
+    {
+        "ward_name": "JAITPUR",
+        "Rank": 248,
+        "Composite_Score": 0.0,
+        "Priority": "LOW",
+        "Impact_Mean": 0.0
+    },
+    {
+        "ward_name": "MEETHAPUR",
+        "Rank": 249,
+        "Composite_Score": 0.0,
+        "Priority": "LOW",
+        "Impact_Mean": 0.0
+    },
+    {
+        "ward_name": "GHAROLI",
+        "Rank": 250,
+        "Composite_Score": 0.0,
+        "Priority": "LOW",
+        "Impact_Mean": 0.0
+    }
+]

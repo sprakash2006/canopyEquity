@@ -1,0 +1,55 @@
+.mapviewer-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.mapviewer-header{
+
+    padding:24px 30px;
+
+    border-bottom:1px solid #1f2937;
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+.mapviewer-header h1{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.mapviewer-header p{
+
+    margin-top:8px;
+
+    color:#94a3b8;
+
+}
+
+.mapviewer-body{
+
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+
+}
+
+.map-section{
+
+    flex:1;
+
+    height:100%;
+
+}

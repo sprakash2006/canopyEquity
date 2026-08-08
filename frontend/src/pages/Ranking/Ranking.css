@@ -1,0 +1,196 @@
+.ranking-page{
+
+padding:30px;
+
+color:white;
+
+}
+
+
+.ranking-header h1{
+
+font-size:32px;
+
+margin-bottom:8px;
+
+}
+
+
+.ranking-header p{
+
+color:#94a3b8;
+
+}
+
+
+
+.ranking-grid{
+
+margin-top:30px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.ranking-card{
+
+
+background:#131d2f;
+
+border-radius:20px;
+
+padding:22px;
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.25);
+
+}
+
+
+
+.rank-number{
+
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#22c55e;
+
+}
+
+
+
+.rank-info h2{
+
+margin:0;
+
+font-size:20px;
+
+}
+
+
+
+.rank-info p{
+
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+color:#94a3b8;
+
+}
+
+
+
+.rank-info b{
+
+color:white;
+
+margin-left:5px;
+
+}
+
+
+
+.trophy{
+
+color:#facc15;
+
+margin-left:auto;
+
+}
+.ranking-table{
+    width:100%;
+    margin-top:30px;
+}
+
+
+.table-header,
+.table-row{
+
+    display:grid;
+
+    grid-template-columns:
+    100px
+    1fr
+    150px
+    180px;
+
+    align-items:center;
+
+    padding:18px 25px;
+
+}
+
+
+.table-header{
+
+    font-weight:700;
+
+    color:#9ca3af;
+
+    border-bottom:1px solid #1e293b;
+
+}
+
+
+
+.table-row{
+
+    margin-top:8px;
+
+    background:#111827;
+
+    border-radius:12px;
+
+    transition:0.3s;
+
+}
+
+
+
+.table-row:hover{
+
+    transform:translateY(-2px);
+
+    background:#172554;
+
+}
+
+
+
+.priority-badge{
+
+    color:#22c55e;
+
+    font-weight:700;
+
+}
+
+
+.page-header h1{
+
+    font-size:32px;
+
+    margin-bottom:8px;
+
+}

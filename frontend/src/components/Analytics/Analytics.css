@@ -1,0 +1,21 @@
+.analytics{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:24px;
+
+margin-top:25px;
+
+}
+
+@media(max-width:1200px){
+
+.analytics{
+
+grid-template-columns:1fr;
+
+}
+
+}

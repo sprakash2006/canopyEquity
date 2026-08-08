@@ -1,0 +1,125 @@
+.upload-page{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:85vh;
+
+}
+
+.upload-card{
+
+    width:520px;
+
+    background:#131d2f;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.upload-card h2{
+
+    color:white;
+
+    margin-top:15px;
+
+}
+
+.upload-card p{
+
+    color:#94a3b8;
+
+    margin:10px 0 25px;
+
+}
+
+.upload-card input{
+
+    width:100%;
+
+    margin-bottom:25px;
+
+}
+
+.upload-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.upload-btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+.upload-status{
+
+    margin-top:20px;
+
+    color:#22c55e;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.spin{
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}

@@ -1,0 +1,41 @@
+.file-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.file-icon{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#1f2937;
+
+    color:#22c55e;
+
+}
+
+
+.download-card button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}

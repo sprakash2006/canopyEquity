@@ -1,0 +1,278 @@
+.reports{
+
+    color:white;
+
+}
+
+
+.reports-header{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.reports-header svg{
+
+    color:#22c55e;
+
+}
+
+
+.reports-header h1{
+
+    margin:0;
+
+    font-size:36px;
+
+}
+
+
+.reports-header p{
+
+    color:#94a3b8;
+
+}
+
+
+
+
+.metrics-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+
+.metric-card{
+
+    background:#131d2f;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.metric-icon{
+
+    background:#22c55e;
+
+    padding:14px;
+
+    border-radius:15px;
+
+    display:flex;
+
+}
+
+
+
+.metric-card span{
+
+    color:#94a3b8;
+
+}
+
+
+.metric-card h2{
+
+    margin:5px 0 0;
+
+    color:white;
+
+}
+
+
+
+
+
+.accuracy-card,
+.outputs-card{
+
+
+    margin-top:30px;
+
+    background:#131d2f;
+
+    padding:30px;
+
+    border-radius:22px;
+
+
+}
+
+
+
+.accuracy{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.accuracy div{
+
+
+    background:#0f172a;
+
+    padding:20px;
+
+    border-radius:15px;
+
+
+}
+
+
+
+.accuracy span{
+
+    color:#94a3b8;
+
+}
+
+
+
+.accuracy strong{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:28px;
+
+    color:#22c55e;
+
+}
+
+
+
+
+.output-item{
+
+
+    display:flex;
+
+    gap:12px;
+
+    padding:15px;
+
+    background:#0f172a;
+
+    margin-top:12px;
+
+    border-radius:12px;
+
+
+}
+
+
+
+.output-item svg{
+
+    color:#22c55e;
+
+}
+
+
+
+.report-download{
+
+
+    margin-top:25px;
+
+    padding:14px 25px;
+
+    background:#22c55e;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+.charts-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:25px;
+
+margin-top:25px;
+
+}
+
+
+
+.chart-card{
+
+background:#131d2f;
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.chart-card h2{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+
+
+@media(max-width:900px){
+
+.charts-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

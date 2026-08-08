@@ -1,0 +1,81 @@
+.legend{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:20px;
+
+    z-index:999;
+
+    background:#131d2f;
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.35);
+
+    min-width:170px;
+
+}
+
+.legend h3{
+
+    margin-bottom:12px;
+
+}
+
+.legend div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:8px;
+
+}
+
+.legend span{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:4px;
+
+}
+
+.veryhigh{
+
+    background:#dc2626;
+
+}
+
+.high{
+
+    background:#ea580c;
+
+}
+
+.medium{
+
+    background:#facc15;
+
+}
+
+.low{
+
+    background:#22c55e;
+
+}
+
+.verylow{
+
+    background:#3b82f6;
+
+}

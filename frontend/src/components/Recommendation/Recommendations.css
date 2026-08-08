@@ -1,0 +1,122 @@
+.recommendations-page{
+
+    padding:30px;
+
+    color:white;
+
+}
+
+
+
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+
+.page-header h1{
+
+    margin:0;
+
+    font-size:32px;
+
+}
+
+
+
+.page-header p{
+
+    color:#94a3b8;
+
+    margin-top:8px;
+
+}
+
+
+
+.recommendation-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.recommendation-card{
+
+    background:#131d2f;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+
+}
+
+
+
+.recommendation-card h2{
+
+    color:white;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.priority{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:13px;
+
+}
+
+
+
+.stats{
+
+    margin-top:20px;
+
+}
+
+
+
+.stats p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#cbd5e1;
+
+    margin:12px 0;
+
+}
+
+
+
+.stats b{
+
+    color:white;
+
+}

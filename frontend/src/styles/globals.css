@@ -1,0 +1,141 @@
+/* ================================
+   CANOPY AI — DESIGN TOKENS
+   Single source of truth for colors + typography.
+   Reference these via var(--token) in component CSS.
+================================ */
+
+:root {
+
+    /* ---- Brand ---- */
+    --brand-primary:      #002d1c;   /* primary buttons, active nav, emphasis */
+    --brand-primary-alt:  #07472e;
+    --brand-secondary:    #1b4332;   /* hover states, secondary actions */
+    --brand-secondary-alt:#3e6752;
+
+    /* ---- Surfaces ---- */
+    --bg:            #fcf9f8;   /* canvas background */
+    --bg-alt:        #f0eded;
+    --card:          #ffffff;   /* cards, floating panels */
+
+    /* ---- Borders ---- */
+    --border:        #e5e2d9;   /* dividers, card outlines */
+    --border-strong: #c1c8c2;
+
+    /* ---- Text ---- */
+    --text:          #1b1c1c;   /* headings, primary text */
+    --text-muted:    #717973;   /* subtitles, captions, metadata */
+    --text-muted-alt:#59645c;
+
+    /* ---- Risk / Priority scale (foreground / soft background) ---- */
+    --risk-veryhigh:     #ba1a1a;
+    --risk-veryhigh-bg:  #fde8e8;
+    --risk-high:         #f48c24;
+    --risk-high-bg:      #fef3c7;
+    --risk-moderate:     #eab552;
+    --risk-moderate-bg:  #d1fae5;
+    --risk-low:          #3e6752;   /* low priority / good canopy */
+    --risk-low-bg:       #e8f2e7;
+
+    /* ---- Typography ---- */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
+    --font-icon: 'Material Symbols Outlined';
+
+    /* Font size scale */
+    --fs-display:   40px;   /* page main headings */
+    --fs-title-lg:  32px;   /* large metric values */
+    --fs-title:     24px;   /* card titles, metric values */
+    --fs-subhead:   18px;   /* section subheadings */
+    --fs-subhead-sm:16px;
+    --fs-body:      14px;   /* body text, button labels */
+    --fs-body-sm:   13px;
+    --fs-caption:   12px;   /* badges, metadata, tooltips */
+    --fs-caption-sm:11px;
+}
+
+
+/* ================================
+   GLOBAL RESET + BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* allow scrolling */
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Material Symbols icon base */
+.material-symbols-outlined {
+    font-family: var(--font-icon);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+/* ================================
+   DASHBOARD LAYOUT
+================================ */
+
+.app-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+.main-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-area {
+    flex: 1;
+    padding: 28px;
+    background: var(--bg);
+    overflow-y: auto;
+}
