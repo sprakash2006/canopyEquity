@@ -55,27 +55,27 @@ export default function WardLayer({
 
     const getColor = (priority) => {
 
-        if (!priority) return "#94a3b8";
+        if (!priority) return "#717973";
 
         switch ((priority || "").toUpperCase()) {
 
             case "VERY HIGH":
-                return "#dc2626";
+                return "#ba1a1a";
 
             case "HIGH":
-                return "#ea580c";
+                return "#f48c24";
 
             case "MEDIUM":
-                return "#facc15";
+                return "#eab552";
 
             case "LOW":
-                return "#22c55e";
+                return "#3e6752";
 
             case "VERY LOW":
-                return "#3b82f6";
+                return "#7fa38f";
 
             default:
-                return "#64748b";
+                return "#717973";
 
         }
 

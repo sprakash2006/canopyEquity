@@ -7,12 +7,13 @@ import {
     Legend
 } from "recharts";
 
+/* Risk/priority scale — order: VERY HIGH, HIGH, MEDIUM, LOW, VERY LOW */
 const COLORS = [
-    "#22c55e",
-    "#f59e0b",
-    "#ef4444",
-    "#3b82f6",
-    "#8b5cf6"
+    "#ba1a1a",
+    "#f48c24",
+    "#eab552",
+    "#3e6752",
+    "#7fa38f"
 ];
 
 export default function LandCoverChart({
@@ -73,7 +74,7 @@ export default function LandCoverChart({
 
             style={{
 
-                background: "#131d2f",
+                background: "var(--card)",
 
                 borderRadius: "24px",
 
@@ -81,7 +82,7 @@ export default function LandCoverChart({
 
                 height: "360px",
 
-                border: "1px solid rgba(255,255,255,.05)"
+                border: "1px solid var(--border)"
 
             }}
 
@@ -91,7 +92,7 @@ export default function LandCoverChart({
 
                 style={{
 
-                    color: "white"
+                    color: "var(--text)"
 
                 }}
 
@@ -105,7 +106,7 @@ export default function LandCoverChart({
 
                 style={{
 
-                    color: "#94a3b8",
+                    color: "var(--text-muted)",
 
                     marginBottom: "20px"
 

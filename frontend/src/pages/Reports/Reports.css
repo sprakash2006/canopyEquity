@@ -1,6 +1,6 @@
 .reports{
 
-    color:white;
+    color:var(--text);
 
 }
 
@@ -20,7 +20,7 @@
 
 .reports-header svg{
 
-    color:#22c55e;
+    color:var(--risk-low);
 
 }
 
@@ -36,7 +36,7 @@
 
 .reports-header p{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
 }
 
@@ -58,7 +58,7 @@
 
 .metric-card{
 
-    background:#131d2f;
+    background:var(--card);
 
     padding:25px;
 
@@ -70,7 +70,7 @@
 
     align-items:center;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
 }
 
@@ -78,7 +78,7 @@
 
 .metric-icon{
 
-    background:#22c55e;
+    background:var(--brand-secondary-alt);
 
     padding:14px;
 
@@ -92,7 +92,7 @@
 
 .metric-card span{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
 }
 
@@ -101,7 +101,7 @@
 
     margin:5px 0 0;
 
-    color:white;
+    color:var(--text);
 
 }
 
@@ -115,11 +115,13 @@
 
     margin-top:30px;
 
-    background:#131d2f;
+    background:var(--card);
 
     padding:30px;
 
     border-radius:22px;
+
+    border:1px solid var(--border);
 
 
 }
@@ -141,7 +143,7 @@
 .accuracy div{
 
 
-    background:#0f172a;
+    background:var(--bg-alt);
 
     padding:20px;
 
@@ -154,7 +156,7 @@
 
 .accuracy span{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
 }
 
@@ -168,7 +170,7 @@
 
     font-size:28px;
 
-    color:#22c55e;
+    color:var(--risk-low);
 
 }
 
@@ -184,7 +186,7 @@
 
     padding:15px;
 
-    background:#0f172a;
+    background:var(--bg-alt);
 
     margin-top:12px;
 
@@ -197,7 +199,7 @@
 
 .output-item svg{
 
-    color:#22c55e;
+    color:var(--risk-low);
 
 }
 
@@ -210,9 +212,9 @@
 
     padding:14px 25px;
 
-    background:#22c55e;
+    background:var(--brand-primary);
 
-    color:white;
+    color:#fff;
 
     border:none;
 
@@ -245,13 +247,13 @@ margin-top:25px;
 
 .chart-card{
 
-background:#131d2f;
+background:var(--card);
 
 padding:25px;
 
 border-radius:20px;
 
-border:1px solid rgba(255,255,255,.08);
+border:1px solid var(--border);
 
 }
 
@@ -259,7 +261,7 @@ border:1px solid rgba(255,255,255,.08);
 
 .chart-card h2{
 
-color:white;
+color:var(--text);
 
 margin-bottom:20px;
 

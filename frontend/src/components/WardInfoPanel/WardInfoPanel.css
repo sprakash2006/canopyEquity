@@ -2,11 +2,11 @@
 
     width:340px;
 
-    background:#111827;
+    background:var(--card);
 
-    color:white;
+    color:var(--text);
 
-    border-left:1px solid #1f2937;
+    border-left:1px solid var(--border);
 
     display:flex;
 
@@ -38,7 +38,7 @@
 
 .panel-header span{
 
-    color:#22c55e;
+    color:var(--risk-low);
 
     font-weight:600;
 
@@ -54,7 +54,7 @@
 
 .panel-card{
 
-    background:#1f2937;
+    background:var(--bg-alt);
 
     border-radius:12px;
 
@@ -70,15 +70,15 @@
 
 .panel-card svg{
 
-    color:#22c55e;
+    color:var(--brand-secondary-alt);
 
 }
 
 .panel-card span{
 
-    color:#9ca3af;
+    color:var(--text-muted);
 
-    font-size:13px;
+    font-size:var(--fs-body-sm);
 
 }
 

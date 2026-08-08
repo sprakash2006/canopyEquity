@@ -8,17 +8,19 @@
 
     z-index:999;
 
-    background:#131d2f;
+    background:var(--card);
 
-    color:white;
+    color:var(--text);
 
     padding:18px;
 
     border-radius:16px;
 
-    box-shadow:0 10px 20px rgba(0,0,0,.35);
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
 
     min-width:170px;
+
+    border:1px solid var(--border);
 
 }
 
@@ -52,30 +54,30 @@
 
 .veryhigh{
 
-    background:#dc2626;
+    background:var(--risk-veryhigh);
 
 }
 
 .high{
 
-    background:#ea580c;
+    background:var(--risk-high);
 
 }
 
 .medium{
 
-    background:#facc15;
+    background:var(--risk-moderate);
 
 }
 
 .low{
 
-    background:#22c55e;
+    background:var(--risk-low);
 
 }
 
 .verylow{
 
-    background:#3b82f6;
+    background:var(--brand-secondary-alt);
 
 }

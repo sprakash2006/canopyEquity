@@ -14,7 +14,7 @@
 
     width:520px;
 
-    background:#131d2f;
+    background:var(--card);
 
     padding:40px;
 
@@ -22,13 +22,15 @@
 
     text-align:center;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.06);
 
 }
 
 .upload-card h2{
 
-    color:white;
+    color:var(--text);
 
     margin-top:15px;
 
@@ -36,7 +38,7 @@
 
 .upload-card p{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
     margin:10px 0 25px;
 
@@ -60,11 +62,11 @@
 
     border-radius:12px;
 
-    background:#22c55e;
+    background:var(--brand-primary);
 
-    color:white;
+    color:#fff;
 
-    font-size:16px;
+    font-size:var(--fs-subhead-sm);
 
     cursor:pointer;
 
@@ -90,7 +92,7 @@
 
     margin-top:20px;
 
-    color:#22c55e;
+    color:var(--risk-low);
 
     display:flex;
 

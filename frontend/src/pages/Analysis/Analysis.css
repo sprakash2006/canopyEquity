@@ -2,7 +2,7 @@
 
     padding:30px;
 
-    color:white;
+    color:var(--text);
 
 }
 
@@ -16,7 +16,7 @@
 
 .analysis-header p{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
     margin-top:8px;
 
@@ -41,7 +41,7 @@
 
 .analysis-card{
 
-    background:#131d2f;
+    background:var(--card);
 
     border-radius:20px;
 
@@ -53,7 +53,7 @@
 
     align-items:center;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
 }
 
@@ -61,7 +61,7 @@
 
 .analysis-icon{
 
-    color:#22c55e;
+    color:var(--risk-low);
 
 }
 
@@ -69,14 +69,14 @@
 
 .analysis-card span{
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
 }
 
 
 .analysis-card h2{
 
-    color:white;
+    color:var(--text);
 
     margin-top:8px;
 
@@ -88,11 +88,13 @@
 
     margin-top:35px;
 
-    background:#131d2f;
+    background:var(--card);
 
     padding:25px;
 
     border-radius:20px;
+
+    border:1px solid var(--border);
 
 }
 
@@ -110,7 +112,7 @@
 
     align-items:center;
 
-    color:#22c55e;
+    color:var(--risk-low);
 
 }
 
@@ -118,7 +120,7 @@
 
 .pipeline-flow div{
 
-    background:#1f2937;
+    background:var(--bg-alt);
 
     padding:15px 20px;
 
@@ -153,7 +155,7 @@
 
 .output-card{
 
-    background:#131d2f;
+    background:var(--card);
 
     padding:20px;
 
@@ -165,6 +167,8 @@
 
     align-items:center;
 
-    color:#cbd5e1;
+    color:var(--text-muted);
+
+    border:1px solid var(--border);
 
 }

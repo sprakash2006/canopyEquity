@@ -12,11 +12,11 @@
 
     padding:24px 30px;
 
-    border-bottom:1px solid #1f2937;
+    border-bottom:1px solid var(--border);
 
-    background:#0f172a;
+    background:var(--card);
 
-    color:white;
+    color:var(--text);
 
 }
 
@@ -32,7 +32,7 @@
 
     margin-top:8px;
 
-    color:#94a3b8;
+    color:var(--text-muted);
 
 }
 

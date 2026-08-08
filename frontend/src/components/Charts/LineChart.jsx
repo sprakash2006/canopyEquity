@@ -52,7 +52,7 @@ export default function PlantationChart({
 
             style={{
 
-                background: "#131d2f",
+                background: "var(--card)",
 
                 borderRadius: "24px",
 
@@ -60,7 +60,7 @@ export default function PlantationChart({
 
                 height: "360px",
 
-                border: "1px solid rgba(255,255,255,.05)"
+                border: "1px solid var(--border)"
 
             }}
 
@@ -70,7 +70,7 @@ export default function PlantationChart({
 
                 style={{
 
-                    color: "white",
+                    color: "var(--text)",
 
                     marginBottom: "8px"
 
@@ -86,7 +86,7 @@ export default function PlantationChart({
 
                 style={{
 
-                    color: "#94a3b8",
+                    color: "var(--text-muted)",
 
                     marginBottom: "25px"
 
@@ -114,7 +114,7 @@ export default function PlantationChart({
 
                     <CartesianGrid
 
-                        stroke="#334155"
+                        stroke="#e5e2d9"
 
                     />
 
@@ -122,13 +122,13 @@ export default function PlantationChart({
 
                         dataKey="name"
 
-                        stroke="#94a3b8"
+                        stroke="#717973"
 
                     />
 
                     <YAxis
 
-                        stroke="#94a3b8"
+                        stroke="#717973"
 
                     />
 
@@ -140,7 +140,7 @@ export default function PlantationChart({
 
                         dataKey="score"
 
-                        stroke="#22c55e"
+                        stroke="#07472e"
 
                         strokeWidth={3}
 

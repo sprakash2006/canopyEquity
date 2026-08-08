@@ -12,10 +12,10 @@
 
     overflow:hidden;
 
-    border:2px solid rgba(255,255,255,.08);
+    border:2px solid var(--border);
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,.35);
+        0 10px 35px rgba(0,0,0,.10);
 
 }
 
@@ -29,7 +29,7 @@
 
     height:100%;
 
-    background:#0f172a;
+    background:var(--bg-alt);
 
 }
 
@@ -44,21 +44,21 @@
     overflow:hidden;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,.35);
+        0 5px 20px rgba(0,0,0,.12);
 
 }
 
 .leaflet-control-layers{
 
-    background:#111827 !important;
+    background:var(--card) !important;
 
-    color:white;
+    color:var(--text);
 
 }
 
 .leaflet-control-layers label{
 
-    color:white;
+    color:var(--text);
 
 }
 
@@ -70,15 +70,15 @@
 
     border-radius:16px;
 
-    background:#131d2f;
+    background:var(--card);
 
-    color:white;
+    color:var(--text);
 
 }
 
 .leaflet-popup-tip{
 
-    background:#131d2f;
+    background:var(--card);
 
 }
 
@@ -92,7 +92,7 @@
 
     margin-bottom:10px;
 
-    color:#22c55e;
+    color:var(--brand-primary);
 
 }
 
@@ -108,7 +108,7 @@
 
 .leaflet-container::-webkit-scrollbar-thumb{
 
-    background:#334155;
+    background:var(--border-strong);
 
     border-radius:10px;
 
