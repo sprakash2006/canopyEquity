@@ -15,6 +15,10 @@ pyfiles.txt
 # Zip Files
 *.zip
 
+# GeoTIFF raster files (exceed GitHub file-size limits)
+*.tif
+*.tiff
+node_modules
 # OS Files
 Thumbs.db
 .DS_Store
