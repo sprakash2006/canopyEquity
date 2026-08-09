@@ -4,7 +4,7 @@ import {
     Moon,
     Sun,
     Wifi,
-    Cpu,
+    Cpu
 } from "lucide-react";
 
 import { useState } from "react";
@@ -34,6 +34,7 @@ export default function Header() {
                         Dashboard
                     </h1>
 
+
                     <span className="header-live-badge">
 
                         <span className="header-live-dot" />
@@ -52,6 +53,7 @@ export default function Header() {
             </div>
 
 
+
             {/* =====================================================
                 CENTER — SEARCH
             ===================================================== */}
@@ -65,11 +67,13 @@ export default function Header() {
                         strokeWidth={2}
                     />
 
+
                     <input
                         type="text"
                         placeholder="Search wards, reports..."
                         aria-label="Search wards and reports"
                     />
+
 
                     <span className="search-shortcut">
                         ⌘ K
@@ -80,6 +84,7 @@ export default function Header() {
             </div>
 
 
+
             {/* =====================================================
                 RIGHT — SYSTEM STATUS
             ===================================================== */}
@@ -87,7 +92,7 @@ export default function Header() {
             <div className="header-right">
 
 
-                {/* Backend */}
+                {/* ================= BACKEND ================= */}
 
                 <div className="status status-backend">
 
@@ -107,6 +112,7 @@ export default function Header() {
                             Backend
                         </span>
 
+
                         <span className="status-value">
 
                             <span className="status-dot online" />
@@ -120,7 +126,8 @@ export default function Header() {
                 </div>
 
 
-                {/* AI */}
+
+                {/* ================= AI ENGINE ================= */}
 
                 <div className="status status-model">
 
@@ -140,6 +147,7 @@ export default function Header() {
                             AI Engine
                         </span>
 
+
                         <span className="status-value">
 
                             <span className="status-dot online" />
@@ -153,17 +161,21 @@ export default function Header() {
                 </div>
 
 
-                {/* Divider */}
+
+                {/* ================= DIVIDER ================= */}
 
                 <div className="header-divider" />
 
 
-                {/* Theme */}
+
+                {/* ================= THEME ================= */}
 
                 <button
                     type="button"
                     className="header-icon-btn"
-                    onClick={() => setDark(!dark)}
+                    onClick={() =>
+                        setDark(!dark)
+                    }
                     aria-label="Toggle theme"
                     title="Toggle theme"
                 >
@@ -187,7 +199,8 @@ export default function Header() {
                 </button>
 
 
-                {/* Notifications */}
+
+                {/* ================= NOTIFICATIONS ================= */}
 
                 <button
                     type="button"
@@ -201,9 +214,11 @@ export default function Header() {
                         strokeWidth={1.9}
                     />
 
+
                     <span className="notification-dot" />
 
                 </button>
+
 
 
                 {/* =================================================
@@ -213,9 +228,7 @@ export default function Header() {
                 <div className="header-profile">
 
                     <div className="header-avatar">
-
                         C
-
                     </div>
 
 
@@ -224,6 +237,7 @@ export default function Header() {
                         <strong>
                             Administrator
                         </strong>
+
 
                         <span>
                             AI Engineer
@@ -235,6 +249,7 @@ export default function Header() {
 
 
             </div>
+
 
         </header>
 

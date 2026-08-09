@@ -11,15 +11,27 @@ import {
     CheckCircle,
     ArrowDownToLine,
     Files,
-    Sparkles
+    Sparkles,
+    BrainCircuit,
+    BarChart3,
+    Leaf,
+    ShieldCheck
 } from "lucide-react";
 
 import {
+    useEffect,
     useState
 } from "react";
 
+import {
+    getReportStatus,
+    generateFinalReport,
+    downloadFinalReport
+} from "../../services/api";
 
-const API_URL = "http://localhost:8000";
+
+const API_URL =
+    "http://localhost:8000";
 
 
 const files = [
@@ -78,78 +90,268 @@ const files = [
 
 export default function Downloads() {
 
-    const [downloading, setDownloading] = useState("");
+    // ======================================================
+    // EXISTING DOWNLOAD STATE
+    // ======================================================
+
+    const [
+        downloading,
+        setDownloading
+    ] = useState("");
 
 
-    const downloadFile = async (file) => {
+    // ======================================================
+    // FINAL REPORT STATE
+    // ======================================================
+
+    const [
+        generatingReport,
+        setGeneratingReport
+    ] = useState(false);
+
+
+    const [
+        reportReady,
+        setReportReady
+    ] = useState(false);
+
+
+    const [
+        reportError,
+        setReportError
+    ] = useState("");
+
+
+    // ======================================================
+    // CHECK REPORT STATUS
+    // ======================================================
+
+    const checkReportStatus = async () => {
 
         try {
 
-            setDownloading(file);
-
-
-            const url =
-                `${API_URL}/outputs/${file}`;
-
-
             const response =
-                await fetch(url);
+                await getReportStatus();
 
-
-            if (!response.ok) {
-
-                throw new Error(
-                    "File not found"
-                );
-
-            }
-
-
-            const blob =
-                await response.blob();
-
-
-            const link =
-                document.createElement("a");
-
-
-            link.href =
-                window.URL.createObjectURL(blob);
-
-
-            link.download =
-                file;
-
-
-            document.body.appendChild(link);
-
-            link.click();
-
-            link.remove();
+            setReportReady(
+                response.data?.ready === true
+            );
 
         }
 
         catch (error) {
 
             console.error(
-                "Download Error",
+                "Report Status Error:",
                 error
             );
-
-
-            alert(
-                "File not available yet"
-            );
-
-        }
-
-        finally {
-
-            setDownloading("");
 
         }
 
     };
+
+
+    // ======================================================
+    // CHECK WHEN PAGE LOADS
+    // ======================================================
+
+    useEffect(() => {
+
+        checkReportStatus();
+
+    }, []);
+
+
+    // ======================================================
+    // GENERATE FINAL REPORT
+    // ======================================================
+
+    const handleGenerateReport =
+        async () => {
+
+            try {
+
+                setGeneratingReport(true);
+
+                setReportError("");
+
+                const response =
+                    await generateFinalReport();
+
+
+                if (
+                    response.data?.success
+                ) {
+
+                    setReportReady(true);
+
+                }
+
+                else {
+
+                    throw new Error(
+                        response.data?.message ||
+                        "Report generation failed."
+                    );
+
+                }
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Report Generation Error:",
+                    error
+                );
+
+
+                const message =
+                    error.response?.data?.detail?.message ||
+                    error.response?.data?.detail ||
+                    error.message ||
+                    "Unable to generate report.";
+
+
+                setReportError(
+                    message
+                );
+
+            }
+
+            finally {
+
+                setGeneratingReport(
+                    false
+                );
+
+            }
+
+        };
+
+
+    // ======================================================
+    // DOWNLOAD FINAL REPORT
+    // ======================================================
+
+    const handleDownloadReport =
+        async () => {
+
+            try {
+
+                setReportError("");
+
+                await downloadFinalReport();
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Report Download Error:",
+                    error
+                );
+
+                setReportError(
+                    "Unable to download the final report."
+                );
+
+            }
+
+        };
+
+
+    // ======================================================
+    // EXISTING FILE DOWNLOAD
+    // ======================================================
+
+    const downloadFile =
+        async (file) => {
+
+            try {
+
+                setDownloading(file);
+
+
+                const url =
+                    `${API_URL}/outputs/${file}`;
+
+
+                const response =
+                    await fetch(url);
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "File not found"
+                    );
+
+                }
+
+
+                const blob =
+                    await response.blob();
+
+
+                const link =
+                    document.createElement(
+                        "a"
+                    );
+
+
+                const objectUrl =
+                    window.URL.createObjectURL(
+                        blob
+                    );
+
+
+                link.href =
+                    objectUrl;
+
+
+                link.download =
+                    file;
+
+
+                document.body.appendChild(
+                    link
+                );
+
+
+                link.click();
+
+
+                link.remove();
+
+
+                window.URL.revokeObjectURL(
+                    objectUrl
+                );
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Download Error",
+                    error
+                );
+
+
+                alert(
+                    "File not available yet"
+                );
+
+            }
+
+            finally {
+
+                setDownloading("");
+
+            }
+
+        };
 
 
     return (
@@ -194,7 +396,8 @@ export default function Downloads() {
 
 
                         <p>
-                            Export generated GIS, AI and recommendation outputs
+                            Export generated GIS, AI and
+                            recommendation outputs
                         </p>
 
                     </div>
@@ -202,9 +405,7 @@ export default function Downloads() {
                 </div>
 
 
-                {/* =================================================
-                    HEADER SUMMARY
-                ================================================= */}
+                {/* HEADER SUMMARY */}
 
                 <div className="downloads-summary">
 
@@ -220,7 +421,7 @@ export default function Downloads() {
                     <div>
 
                         <strong>
-                            {files.length}
+                            {files.length + 1}
                         </strong>
 
                         <span>
@@ -232,6 +433,237 @@ export default function Downloads() {
                 </div>
 
             </div>
+
+
+            {/* =================================================
+                FINAL EXPLAINABLE AI REPORT
+            ================================================= */}
+
+            <section className="final-report-card">
+
+                <div className="final-report-main">
+
+
+                    {/* ICON */}
+
+                    <div className="final-report-icon">
+
+                        <BrainCircuit
+                            size={28}
+                            strokeWidth={1.8}
+                        />
+
+                    </div>
+
+
+                    {/* CONTENT */}
+
+                    <div className="final-report-content">
+
+                        <div className="final-report-eyebrow">
+
+                            <Sparkles
+                                size={12}
+                            />
+
+                            CANOPYAI DECISION REPORT
+
+                        </div>
+
+
+                        <h2>
+                            Final Explainable AI Report
+                        </h2>
+
+
+                        <p>
+
+                            Generate a comprehensive PDF
+                            explaining the complete CanopyAI
+                            analysis — from satellite imagery
+                            and AI canopy prediction to model
+                            evaluation, spatial impact scoring,
+                            ward prioritization and plantation
+                            recommendations.
+
+                        </p>
+
+
+                        {/* REPORT FEATURES */}
+
+                        <div className="final-report-features">
+
+                            <span>
+
+                                <Map
+                                    size={14}
+                                />
+
+                                Spatial Maps
+
+                            </span>
+
+
+                            <span>
+
+                                <BrainCircuit
+                                    size={14}
+                                />
+
+                                AI Analysis
+
+                            </span>
+
+
+                            <span>
+
+                                <BarChart3
+                                    size={14}
+                                />
+
+                                Model Metrics
+
+                            </span>
+
+
+                            <span>
+
+                                <Leaf
+                                    size={14}
+                                />
+
+                                Planting Strategy
+
+                            </span>
+
+
+                            <span>
+
+                                <ShieldCheck
+                                    size={14}
+                                />
+
+                                Explainable Results
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* ACTION */}
+
+                    <div className="final-report-action">
+
+                        {!reportReady ? (
+
+                            <button
+                                className="generate-report-btn"
+                                onClick={
+                                    handleGenerateReport
+                                }
+                                disabled={
+                                    generatingReport
+                                }
+                            >
+
+                                {generatingReport ? (
+
+                                    <>
+
+                                        <Loader2
+                                            size={17}
+                                            className="spin"
+                                        />
+
+                                        Generating...
+
+                                    </>
+
+                                ) : (
+
+                                    <>
+
+                                        <FileText
+                                            size={17}
+                                        />
+
+                                        Generate Report
+
+                                    </>
+
+                                )}
+
+                            </button>
+
+                        ) : (
+
+                            <button
+                                className="generate-report-btn report-download-btn"
+                                onClick={
+                                    handleDownloadReport
+                                }
+                            >
+
+                                <Download
+                                    size={17}
+                                />
+
+                                Download PDF
+
+                            </button>
+
+                        )}
+
+                    </div>
+
+                </div>
+
+
+                {/* SUCCESS */}
+
+                {reportReady && (
+
+                    <div className="final-report-success">
+
+                        <CheckCircle
+                            size={16}
+                        />
+
+                        <span>
+
+                            Final explainable AI report
+                            is ready for download.
+
+                        </span>
+
+                        <span className="report-status-badge">
+
+                            PDF READY
+
+                        </span>
+
+                    </div>
+
+                )}
+
+
+                {/* ERROR */}
+
+                {reportError && (
+
+                    <div className="final-report-error">
+
+                        <span>
+                            {reportError}
+                        </span>
+
+                    </div>
+
+                )}
+
+            </section>
 
 
             {/* =================================================
@@ -270,125 +702,127 @@ export default function Downloads() {
 
             <div className="download-grid">
 
-                {files.map((item, index) => (
+                {files.map(
+                    (item, index) => (
 
-                    <div
-                        className="download-card"
-                        key={index}
-                    >
+                        <div
+                            className="download-card"
+                            key={index}
+                        >
+
+                            {/* CARD TOP */}
+
+                            <div className="download-card-top">
+
+                                <div className="file-icon">
+
+                                    {item.icon}
+
+                                </div>
 
 
-                        {/* CARD TOP */}
+                                <span className="file-ready">
 
-                        <div className="download-card-top">
+                                    <CheckCircle
+                                        size={11}
+                                    />
 
-                            <div className="file-icon">
+                                    Ready
 
-                                {item.icon}
+                                </span>
 
                             </div>
 
 
-                            <span className="file-ready">
+                            {/* FILE INFO */}
 
-                                <CheckCircle
-                                    size={11}
-                                />
+                            <div className="file-info">
 
-                                Ready
-
-                            </span>
-
-                        </div>
+                                <h3>
+                                    {item.name}
+                                </h3>
 
 
-                        {/* FILE INFO */}
+                                <p>
+                                    {item.file}
+                                </p>
 
-                        <div className="file-info">
-
-                            <h3>
-                                {item.name}
-                            </h3>
+                            </div>
 
 
-                            <p>
-                                {item.file}
-                            </p>
+                            {/* TYPE */}
 
-                        </div>
+                            <div className="file-meta">
 
+                                <span className="file-type">
 
-                        {/* TYPE */}
+                                    {item.type}
 
-                        <div className="file-meta">
-
-                            <span className="file-type">
-
-                                {item.type}
-
-                            </span>
+                                </span>
 
 
-                            <span className="file-generated">
+                                <span className="file-generated">
 
-                                AI Generated
+                                    AI Generated
 
-                            </span>
+                                </span>
 
-                        </div>
+                            </div>
 
 
-                        {/* DOWNLOAD */}
+                            {/* DOWNLOAD */}
 
-                        <button
+                            <button
 
-                            className="download-button"
+                                className="download-button"
 
-                            onClick={() =>
-                                downloadFile(
+                                onClick={() =>
+                                    downloadFile(
+                                        item.file
+                                    )
+                                }
+
+                                disabled={
+                                    downloading ===
                                     item.file
-                                )
-                            }
+                                }
 
-                            disabled={
-                                downloading ===
-                                item.file
-                            }
+                            >
 
-                        >
+                                {downloading ===
+                                item.file ? (
 
-                            {downloading === item.file ? (
+                                    <>
 
-                                <>
+                                        <Loader2
+                                            size={15}
+                                            className="spin"
+                                        />
 
-                                    <Loader2
-                                        size={15}
-                                        className="spin"
-                                    />
+                                        Downloading...
 
-                                    Downloading...
+                                    </>
 
-                                </>
+                                ) : (
 
-                            ) : (
+                                    <>
 
-                                <>
+                                        <Download
+                                            size={15}
+                                        />
 
-                                    <Download
-                                        size={15}
-                                    />
+                                        Download File
 
-                                    Download File
+                                    </>
 
-                                </>
+                                )}
 
-                            )}
+                            </button>
 
-                        </button>
+                        </div>
 
-                    </div>
-
-                ))}
+                    )
+                )}
 
             </div>
 
@@ -415,8 +849,9 @@ export default function Downloads() {
                     </strong>
 
                     <span>
-                        GIS layers, model predictions and recommendation reports
-                        are available for export.
+                        GIS layers, model predictions and
+                        recommendation reports are available
+                        for export.
                     </span>
 
                 </div>

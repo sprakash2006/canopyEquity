@@ -1,22 +1,29 @@
 import "./Dashboard.css";
-import { useEffect, useState } from "react";
+
+import {
+    useEffect,
+    useState
+} from "react";
 
 import {
     getDashboard,
     getStatus
 } from "../../services/api";
 
-import KPICard from "../../components/KPICard/KPICard";
-import Hero from "../../components/Hero/Hero";
-import Analytics from "../../components/Analytics/Analytics";
-import WardRanking from "../../components/WardRanking/WardRanking";
-import Recommendation from "../../components/Recommendation/Recommendation";
-import ProgressTracker from "../../components/Progress/ProgressTracker";
+import KPICard
+    from "../../components/KPICard/KPICard";
+
+import Hero
+    from "../../components/Hero/Hero";
+
+import Analytics
+    from "../../components/Analytics/Analytics";
+
+import ProgressTracker
+    from "../../components/Progress/ProgressTracker";
 
 import {
     Trees,
-    Leaf,
-    Thermometer,
     Coins,
     Globe,
     Target,
@@ -27,18 +34,38 @@ import {
 
 export default function Dashboard() {
 
-    const [summary, setSummary] = useState({});
+    // ==========================================================
+    // STATE
+    // ==========================================================
 
-    const [dashboard, setDashboard] = useState([]);
+    const [
+        summary,
+        setSummary
+    ] = useState({});
 
-    const [recommendations, setRecommendations] = useState([]);
 
-    const [ai, setAI] = useState({});
+    const [
+        dashboard,
+        setDashboard
+    ] = useState([]);
 
-    const [loading, setLoading] = useState(true);
 
-    const [backendStatus, setBackendStatus] =
-        useState("Offline");
+    const [
+        ai,
+        setAI
+    ] = useState({});
+
+
+    const [
+        loading,
+        setLoading
+    ] = useState(true);
+
+
+    const [
+        backendStatus,
+        setBackendStatus
+    ] = useState("Offline");
 
 
     // ==========================================================
@@ -49,7 +76,9 @@ export default function Dashboard() {
 
         try {
 
-            const status = await getStatus();
+            const status =
+                await getStatus();
+
 
             if (status.status === 200) {
 
@@ -58,7 +87,8 @@ export default function Dashboard() {
             }
 
 
-            const response = await getDashboard();
+            const response =
+                await getDashboard();
 
 
             console.log(
@@ -81,11 +111,6 @@ export default function Dashboard() {
             );
 
             console.log(
-                "RECOMMENDATIONS:",
-                response.data.recommendations
-            );
-
-            console.log(
                 "========================================"
             );
 
@@ -100,11 +125,6 @@ export default function Dashboard() {
             );
 
 
-            setRecommendations(
-                response.data.recommendations || []
-            );
-
-
             setAI(
                 response.data.ai || {}
             );
@@ -113,15 +133,23 @@ export default function Dashboard() {
 
         catch (error) {
 
-            console.error(error);
+            console.error(
+                "Dashboard Error:",
+                error
+            );
 
-            setBackendStatus("Offline");
+
+            setBackendStatus(
+                "Offline"
+            );
 
         }
 
         finally {
 
-            setLoading(false);
+            setLoading(
+                false
+            );
 
         }
 
@@ -137,14 +165,17 @@ export default function Dashboard() {
         loadDashboard();
 
 
-        const interval = setInterval(
-            loadDashboard,
-            10000
-        );
+        const interval =
+            setInterval(
+                loadDashboard,
+                10000
+            );
 
 
         return () =>
-            clearInterval(interval);
+            clearInterval(
+                interval
+            );
 
     }, []);
 
@@ -165,10 +196,16 @@ export default function Dashboard() {
         }
 
 
-        return Number(value).toFixed(2);
+        return Number(
+            value
+        ).toFixed(2);
 
     };
 
+
+    // ==========================================================
+    // UI
+    // ==========================================================
 
     return (
 
@@ -210,13 +247,17 @@ export default function Dashboard() {
 
                 <div className="dashboard-status">
 
-                    <span className="dashboard-status-dot" />
+                    <span
+                        className="dashboard-status-dot"
+                    />
+
 
                     <div>
 
                         <strong>
                             System Operational
                         </strong>
+
 
                         <span>
                             AI analysis services connected
@@ -311,7 +352,9 @@ export default function Dashboard() {
 
                         {loading
                             ? "..."
-                            : score(summary.highest_score)
+                            : score(
+                                summary.highest_score
+                            )
                         }
 
                     </strong>
@@ -336,7 +379,9 @@ export default function Dashboard() {
                 <div className="dashboard-kpi-wrapper">
 
                     <KPICard
+
                         title="Average Score"
+
                         value={
                             loading
                                 ? "..."
@@ -344,11 +389,17 @@ export default function Dashboard() {
                                     summary.average_score
                                 )
                         }
+
                         subtitle="City Average"
+
                         icon={
-                            <Coins size={23} />
+                            <Coins
+                                size={23}
+                            />
                         }
+
                         color="#16a34a"
+
                     />
 
                 </div>
@@ -357,7 +408,9 @@ export default function Dashboard() {
                 <div className="dashboard-kpi-wrapper">
 
                     <KPICard
+
                         title="Lowest Score"
+
                         value={
                             loading
                                 ? "..."
@@ -365,11 +418,17 @@ export default function Dashboard() {
                                     summary.lowest_score
                                 )
                         }
+
                         subtitle="Minimum Impact"
+
                         icon={
-                            <Globe size={23} />
+                            <Globe
+                                size={23}
+                            />
                         }
+
                         color="#64748b"
+
                     />
 
                 </div>
@@ -378,16 +437,24 @@ export default function Dashboard() {
                 <div className="dashboard-kpi-wrapper">
 
                     <KPICard
+
                         title="AI Engine"
+
                         value={
                             ai?.model ||
                             "SegFormer"
                         }
+
                         subtitle="Semantic Segmentation"
+
                         icon={
-                            <Sparkles size={23} />
+                            <Sparkles
+                                size={23}
+                            />
                         }
+
                         color="#15803d"
+
                     />
 
                 </div>
@@ -396,29 +463,42 @@ export default function Dashboard() {
                 <div className="dashboard-kpi-wrapper">
 
                     <KPICard
+
                         title="Backend Status"
-                        value={backendStatus}
-                        subtitle="FastAPI"
-                        icon={
-                            <Target size={23} />
+
+                        value={
+                            backendStatus
                         }
+
+                        subtitle="FastAPI"
+
+                        icon={
+                            <Target
+                                size={23}
+                            />
+                        }
+
                         color={
                             backendStatus === "Online"
                                 ? "#16a34a"
                                 : "#ef4444"
                         }
+
                     />
 
                 </div>
+
 
             </section>
 
 
             {/* ==================================================
-                HERO / AI COMMAND CENTER
+                GIS MAP ONLY
+                AI COMMAND CENTER REMOVED FROM DASHBOARD
             ================================================== */}
 
             <section className="dashboard-hero-section">
+
 
                 <div className="dashboard-section-heading">
 
@@ -430,13 +510,13 @@ export default function Dashboard() {
                                 size={13}
                             />
 
-                            AI COMMAND CENTER
+                            GIS INTELLIGENCE
 
                         </div>
 
 
                         <h2>
-                            Intelligence Overview
+                            Spatial Intelligence Overview
                         </h2>
 
                     </div>
@@ -453,10 +533,17 @@ export default function Dashboard() {
                 </div>
 
 
+                {/* 
+                    Hero is told to hide the AI Command Center.
+                    The GIS map remains visible.
+                */}
+
                 <Hero
                     ai={ai}
                     backendStatus={backendStatus}
+                    showCommandCenter={false}
                 />
+
 
             </section>
 
@@ -467,6 +554,7 @@ export default function Dashboard() {
 
             <section className="dashboard-analytics-section">
 
+
                 <div className="dashboard-section-heading">
 
                     <div>
@@ -474,6 +562,7 @@ export default function Dashboard() {
                         <div className="section-eyebrow">
                             SPATIAL INSIGHTS
                         </div>
+
 
                         <h2>
                             Impact Analytics
@@ -489,94 +578,6 @@ export default function Dashboard() {
                     summary={summary}
                 />
 
-            </section>
-
-
-            {/* ==================================================
-                RANKING + RECOMMENDATIONS
-            ================================================== */}
-
-            <section className="dashboard-bottom-section">
-
-
-                <div className="dashboard-panel">
-
-                    <div className="dashboard-panel-header">
-
-                        <div>
-
-                            <span className="panel-eyebrow">
-                                PRIORITY AREAS
-                            </span>
-
-                            <h2>
-                                Ward Ranking
-                            </h2>
-
-                            <p>
-                                Highest-impact locations identified by AI
-                            </p>
-
-                        </div>
-
-
-                        <div className="panel-icon">
-
-                            <Leaf
-                                size={18}
-                            />
-
-                        </div>
-
-                    </div>
-
-
-                    <WardRanking
-                        wards={dashboard}
-                    />
-
-                </div>
-
-
-                <div className="dashboard-panel">
-
-                    <div className="dashboard-panel-header">
-
-                        <div>
-
-                            <span className="panel-eyebrow">
-                                AI DECISIONS
-                            </span>
-
-                            <h2>
-                                Planting Recommendations
-                            </h2>
-
-                            <p>
-                                Optimized interventions for priority zones
-                            </p>
-
-                        </div>
-
-
-                        <div className="panel-icon recommendation-icon">
-
-                            <Trees
-                                size={18}
-                            />
-
-                        </div>
-
-                    </div>
-
-
-                    <Recommendation
-                        recommendations={
-                            recommendations
-                        }
-                    />
-
-                </div>
 
             </section>
 
@@ -587,6 +588,7 @@ export default function Dashboard() {
 
             <section className="dashboard-pipeline-section">
 
+
                 <div className="dashboard-section-heading">
 
                     <div>
@@ -594,6 +596,7 @@ export default function Dashboard() {
                         <div className="section-eyebrow">
                             PROCESSING STATUS
                         </div>
+
 
                         <h2>
                             AI Pipeline
@@ -605,6 +608,7 @@ export default function Dashboard() {
 
 
                 <ProgressTracker />
+
 
             </section>
 

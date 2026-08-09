@@ -3,54 +3,60 @@ import "./Hero.css";
 import MapCard from "../Map/MapCard";
 import AICommandCenter from "../AICommandCenter/AICommandCenter";
 
+
 export default function Hero({
+
     ai,
-    backendStatus
+
+    backendStatus,
+
+    showCommandCenter = true
+
 }) {
 
     return (
 
         <section className="hero">
 
-            {/* =================================================
-                GIS INTELLIGENCE
-            ================================================= */}
 
-            <div className="hero-left">
+            {/* ==================================================
+                GIS MAP
+            ================================================== */}
 
-                <div className="hero-panel-label">
-
-                    <span className="hero-panel-status" />
-
-                    GIS INTELLIGENCE
-
-                </div>
+            <div
+                className={
+                    showCommandCenter
+                        ? "hero-left"
+                        : "hero-left hero-full"
+                }
+            >
 
                 <MapCard />
 
             </div>
 
 
-            {/* =================================================
+            {/* ==================================================
                 AI COMMAND CENTER
-            ================================================= */}
+            ================================================== */}
 
-            <div className="hero-right">
+            {showCommandCenter && (
 
-                <div className="hero-panel-label">
+                <div className="hero-right">
 
-                    <span className="hero-ai-indicator" />
+                    <AICommandCenter
 
-                    AI COMMAND CENTER
+                        ai={ai}
+
+                        backendStatus={
+                            backendStatus
+                        }
+
+                    />
 
                 </div>
 
-                <AICommandCenter
-                    ai={ai}
-                    backendStatus={backendStatus}
-                />
-
-            </div>
+            )}
 
         </section>
 

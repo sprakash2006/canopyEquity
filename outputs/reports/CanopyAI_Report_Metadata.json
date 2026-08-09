@@ -1,0 +1,9 @@
+{
+    "model": "gemini-3.6-flash",
+    "word_count": 238,
+    "target_minimum": 2200,
+    "target_preferred": "2300-2600",
+    "target_maximum": 2800,
+    "status": "generated",
+    "source": "CanopyAI existing outputs"
+}

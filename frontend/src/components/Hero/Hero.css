@@ -1,34 +1,33 @@
 /* ============================================================
-   CANOPYAI — HERO / INTELLIGENCE CENTER
+   CANOPYAI — HERO / GIS INTELLIGENCE CENTER
    Professional White AI + GIS Dashboard
-   UI ONLY
-   ============================================================ */
+   Dashboard: Full-width GIS Map
+============================================================ */
 
 
 /* ============================================================
-   HERO GRID
-   ============================================================ */
+   HERO CONTAINER
+   Full-width because AI Command Center is hidden on Dashboard
+============================================================ */
 
 .hero {
 
     width: 100%;
 
-    display: grid;
+    display: block;
 
-    grid-template-columns:
-        minmax(0, 1.8fr)
-        minmax(300px, 0.82fr);
+    margin: 0;
 
-    gap: 16px;
+    padding: 0;
 
-    align-items: stretch;
+    box-sizing: border-box;
 
 }
 
 
 /* ============================================================
    HERO PANELS
-   ============================================================ */
+============================================================ */
 
 .hero-left,
 .hero-right {
@@ -49,12 +48,36 @@
 
     overflow: hidden;
 
+    box-sizing: border-box;
+
+}
+
+
+/* ============================================================
+   FULL WIDTH MAP
+   Used when AI Command Center is hidden
+============================================================ */
+
+.hero-left.hero-full {
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 620px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
 }
 
 
 /* ============================================================
    PANEL LABEL
-   ============================================================ */
+============================================================ */
 
 .hero-panel-label {
 
@@ -74,42 +97,33 @@
 
     height: 25px;
 
-    padding:
-        0 8px;
+    padding: 0 8px;
 
-    background:
-        rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.94);
 
-    border:
-        1px solid rgba(226, 232, 240, 0.95);
+    border: 1px solid rgba(226, 232, 240, 0.95);
 
-    border-radius:
-        7px;
+    border-radius: 7px;
 
     box-shadow:
         0 2px 8px rgba(15, 23, 42, 0.07);
 
-    color:
-        #475569;
+    color: #475569;
 
-    font-size:
-        8px;
+    font-size: 8px;
 
-    font-weight:
-        800;
+    font-weight: 800;
 
-    letter-spacing:
-        0.09em;
+    letter-spacing: 0.09em;
 
-    backdrop-filter:
-        blur(8px);
+    backdrop-filter: blur(8px);
 
 }
 
 
 /* ============================================================
    GIS STATUS
-   ============================================================ */
+============================================================ */
 
 .hero-panel-status {
 
@@ -119,8 +133,7 @@
 
     border-radius: 50%;
 
-    background:
-        #16a34a;
+    background: #16a34a;
 
     box-shadow:
         0 0 0 3px rgba(22, 163, 74, 0.10);
@@ -130,7 +143,7 @@
 
 /* ============================================================
    AI STATUS
-   ============================================================ */
+============================================================ */
 
 .hero-ai-indicator {
 
@@ -140,8 +153,7 @@
 
     border-radius: 50%;
 
-    background:
-        #15803d;
+    background: #15803d;
 
     box-shadow:
         0 0 0 3px rgba(21, 128, 61, 0.10);
@@ -150,8 +162,8 @@
 
 
 /* ============================================================
-   MAP
-   ============================================================ */
+   MAP CONTENT
+============================================================ */
 
 .hero-left > *:not(.hero-panel-label) {
 
@@ -163,8 +175,103 @@
 
 
 /* ============================================================
+   FULL WIDTH MAP CONTENT
+============================================================ */
+
+.hero-left.hero-full > *:not(.hero-panel-label) {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* ============================================================
+   MAPCARD
+   Full width + larger height
+============================================================ */
+
+.hero-left .map-card {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 390px;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ============================================================
+   FULL WIDTH MAPCARD
+============================================================ */
+
+.hero-left.hero-full .map-card {
+
+    width: 100%;
+
+    height: 620px;
+
+    min-height: 620px;
+
+    max-width: none;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
+
+/* ============================================================
+   MAP CONTAINER OVERRIDE
+   Prevents map from staying narrow
+============================================================ */
+
+.hero-left.hero-full
+.map-card
+.map-container {
+
+    width: 100%;
+
+    max-width: none;
+
+}
+
+
+/* ============================================================
+   LEAFLET MAP
+============================================================ */
+
+.hero-left.hero-full
+.leaflet-container {
+
+    width: 100% !important;
+
+    height: 620px !important;
+
+    min-height: 620px;
+
+    border-radius: 0;
+
+}
+
+
+/* ============================================================
    AI PANEL
-   ============================================================ */
+   Kept for other pages that still use Hero normally
+============================================================ */
 
 .hero-right {
 
@@ -185,30 +292,8 @@
 
 
 /* ============================================================
-   MAPCARD OVERRIDES
-   Keeps the map contained inside the hero card
-   ============================================================ */
-
-.hero-left .map-card {
-
-    width: 100%;
-
-    height: 100%;
-
-    min-height: 390px;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-}
-
-
-/* ============================================================
    AI COMMAND CENTER
-   ============================================================ */
+============================================================ */
 
 .hero-right .ai-command-center {
 
@@ -227,31 +312,32 @@
 
 /* ============================================================
    TABLET
-   ============================================================ */
+============================================================ */
 
 @media (max-width: 1100px) {
 
-    .hero {
+    .hero-left.hero-full {
 
-        grid-template-columns:
-            minmax(0, 1.4fr)
-            minmax(280px, 0.8fr);
+        min-height: 560px;
 
     }
 
 
-    .hero-left,
-    .hero-right {
+    .hero-left.hero-full .map-card {
 
-        min-height: 360px;
+        height: 560px;
+
+        min-height: 560px;
 
     }
 
 
-    .hero-left .map-card,
-    .hero-right .ai-command-center {
+    .hero-left.hero-full
+    .leaflet-container {
 
-        min-height: 360px;
+        height: 560px !important;
+
+        min-height: 560px;
 
     }
 
@@ -260,30 +346,41 @@
 
 /* ============================================================
    SMALL TABLET
-   ============================================================ */
+============================================================ */
 
 @media (max-width: 900px) {
 
     .hero {
 
-        grid-template-columns:
-            1fr;
+        width: 100%;
 
     }
 
 
-    .hero-left,
-    .hero-right {
+    .hero-left.hero-full {
 
-        min-height: 390px;
+        min-height: 500px;
+
+        border-radius: 14px;
 
     }
 
 
-    .hero-left .map-card,
-    .hero-right .ai-command-center {
+    .hero-left.hero-full .map-card {
 
-        min-height: 390px;
+        height: 500px;
+
+        min-height: 500px;
+
+    }
+
+
+    .hero-left.hero-full
+    .leaflet-container {
+
+        height: 500px !important;
+
+        min-height: 500px;
 
     }
 
@@ -292,13 +389,13 @@
 
 /* ============================================================
    MOBILE
-   ============================================================ */
+============================================================ */
 
 @media (max-width: 640px) {
 
     .hero {
 
-        gap: 12px;
+        width: 100%;
 
     }
 
@@ -313,10 +410,37 @@
     }
 
 
-    .hero-left .map-card,
-    .hero-right .ai-command-center {
+    .hero-left.hero-full {
+
+        min-height: 420px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .hero-left .map-card {
 
         min-height: 330px;
+
+    }
+
+
+    .hero-left.hero-full .map-card {
+
+        height: 420px;
+
+        min-height: 420px;
+
+    }
+
+
+    .hero-left.hero-full
+    .leaflet-container {
+
+        height: 420px !important;
+
+        min-height: 420px;
 
     }
 
@@ -329,8 +453,7 @@
 
         height: 23px;
 
-        padding:
-            0 7px;
+        padding: 0 7px;
 
         font-size: 7px;
 
@@ -340,8 +463,42 @@
 
 
 /* ============================================================
+   VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 420px) {
+
+    .hero-left.hero-full {
+
+        min-height: 360px;
+
+    }
+
+
+    .hero-left.hero-full .map-card {
+
+        height: 360px;
+
+        min-height: 360px;
+
+    }
+
+
+    .hero-left.hero-full
+    .leaflet-container {
+
+        height: 360px !important;
+
+        min-height: 360px;
+
+    }
+
+}
+
+
+/* ============================================================
    REDUCED MOTION
-   ============================================================ */
+============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
 

@@ -1,0 +1,10 @@
+# CANOPYAI: EXPLAINABLE AI DECISION SUPPORT REPORT
+## Urban Tree Equity & Planting Prioritization Assessment
+
+---
+
+### 1. EXECUTIVE SUMMARY
+
+The CanopyAI platform represents an advanced artificial intelligence decision-support framework designed to evaluate urban tree canopy equity, map spatial environmental deficits, and optimize tree planting prioritization across complex municipal landscapes. Urban centers face escalating ecological challenges, including intensified urban heat island effects, localized thermal stress, atmospheric pollution, and inequitable green infrastructure distribution. Traditional urban forestry planning frequently relies on aggregated municipal averages or ad-hoc site selection, failing to address localized environmental justice disparities. CanopyAI resolves these operational limitations by integrating high-resolution multispectral satellite imagery, pixel-level semantic segmentation neural networks, multi-criteria spatial impact modeling, and administrative ward-level optimization to deliver transparent, reproducible, and actionable decision support for urban planning authorities.
+
+The empirical evaluation presented within this report spans a comprehensive urban domain partitioned into 250 distinct administrative wards. Across this entire jurisdictional framework, CanopyAI evaluated spatial impact and composite priority metrics, revealing extreme environmental variation across the urban fabric. The synthesized composite priority scores range from a minimum score of 0.0031 (specifically 0.00307889) to a maximum score of 88.5179 (specifically 88.51791723), with a city-wide mean composite score of 58.2676. Categorizing these administrative units into standardized priority tiers established that 18 wards are classified under VERY HIGH priority, 80 wards under HIGH priority, 104 wards under MEDIUM priority, and 48 wards under LOW priority. This distribution highlights that nearly 39.2
