@@ -100,11 +100,16 @@ class BenefitEngine:
 
 
 
+        # NaN NDVI = we don't know.  Treat unknown as neutral
+        # (0.5) instead of 0 — otherwise every "no-data" pixel
+        # inherits max vegetation-deficit and falsely inflates
+        # benefit (this was the Cantonment / Lutyens' bug).
+
         ndvi = np.nan_to_num(
 
             rasters["ndvi"],
 
-            nan=0
+            nan=0.5
 
         )
 

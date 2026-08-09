@@ -3,11 +3,17 @@ import {
     Pie,
     Cell,
     ResponsiveContainer,
-    Tooltip,
-    Legend
+    Tooltip
 } from "recharts";
 
-/* Risk/priority scale — order: VERY HIGH, HIGH, MEDIUM, LOW, VERY LOW */
+import "./PieChart.css";
+
+
+/*
+    Risk / priority scale
+    VERY HIGH → HIGH → MEDIUM → LOW → VERY LOW
+*/
+
 const COLORS = [
     "#ba1a1a",
     "#f48c24",
@@ -16,10 +22,9 @@ const COLORS = [
     "#3e6752"
 ];
 
+
 export default function LandCoverChart({
-
     dashboard = []
-
 }) {
 
     const priorityCount = {
@@ -36,6 +41,7 @@ export default function LandCoverChart({
 
     };
 
+
     dashboard.forEach((ward) => {
 
         const priority = (
@@ -48,7 +54,10 @@ export default function LandCoverChart({
 
         ).toUpperCase();
 
-        if (priorityCount[priority] !== undefined) {
+
+        if (
+            priorityCount[priority] !== undefined
+        ) {
 
             priorityCount[priority]++;
 
@@ -56,113 +65,213 @@ export default function LandCoverChart({
 
     });
 
-    const data = Object.entries(priorityCount).map(
 
+    const data = Object.entries(
+        priorityCount
+    ).map(
         ([name, value]) => ({
-
             name,
-
             value
-
         })
-
     );
+
+
+    const total = dashboard.length;
+
 
     return (
 
-        <div
+        <div className="priority-chart">
 
-            style={{
 
-                background: "var(--card)",
+            {/* =================================================
+                CHART
+            ================================================= */}
 
-                borderRadius: "24px",
+            <div className="priority-chart-visual">
 
-                padding: "25px",
+                <ResponsiveContainer
+                    width="100%"
+                    height="100%"
+                >
 
-                height: "360px",
+                    <PieChart>
 
-                border: "1px solid var(--border)"
+                        <Pie
 
-            }}
+                            data={data}
 
-        >
+                            dataKey="value"
 
-            <h2
+                            nameKey="name"
 
-                style={{
+                            cx="50%"
 
-                    color: "var(--text)"
+                            cy="50%"
 
-                }}
+                            innerRadius="55%"
 
-            >
+                            outerRadius="78%"
 
-                Ward Priority Distribution
+                            paddingAngle={2}
 
-            </h2>
+                            stroke="#ffffff"
 
-            <p
+                            strokeWidth={2}
 
-                style={{
+                            isAnimationActive={true}
 
-                    color: "var(--text-muted)",
+                            animationDuration={700}
 
-                    marginBottom: "20px"
+                        >
 
-                }}
+                            {data.map(
+                                (entry, index) => (
 
-            >
+                                    <Cell
+                                        key={`cell-${index}`}
+                                        fill={
+                                            COLORS[
+                                                index %
+                                                COLORS.length
+                                            ]
+                                        }
+                                    />
 
-                AI Recommendation Summary
+                                )
+                            )}
 
-            </p>
+                        </Pie>
 
-            <ResponsiveContainer width="100%" height="85%">
 
-                <PieChart>
+                        <Tooltip
+                            content={
+                                <PriorityTooltip />
+                            }
+                        />
 
-                    <Pie
+                    </PieChart>
 
-                        data={data}
+                </ResponsiveContainer>
 
-                        dataKey="value"
 
-                        nameKey="name"
+                {/* =================================================
+                    CENTER VALUE
+                ================================================= */}
 
-                        innerRadius={65}
+                <div className="priority-center">
 
-                        outerRadius={100}
+                    <strong>
+                        {total}
+                    </strong>
 
-                        paddingAngle={3}
+                    <span>
+                        Wards
+                    </span>
 
-                    >
+                </div>
 
-                        {
+            </div>
 
-                            data.map((entry, index) => (
 
-                                <Cell
+            {/* =================================================
+                CUSTOM LEGEND
+            ================================================= */}
 
-                                    key={index}
+            <div className="priority-legend">
 
-                                    fill={COLORS[index % COLORS.length]}
+                {data.map(
+                    (item, index) => (
 
-                                />
+                        <div
+                            className="priority-legend-item"
+                            key={item.name}
+                        >
 
-                            ))
+                            <span
+                                className="priority-dot"
+                                style={{
+                                    backgroundColor:
+                                        COLORS[
+                                            index %
+                                            COLORS.length
+                                        ]
+                                }}
+                            />
 
-                        }
 
-                    </Pie>
+                            <span className="priority-name">
+                                {item.name}
+                            </span>
 
-                    <Tooltip />
 
-                    <Legend />
+                            <strong className="priority-value">
+                                {item.value}
+                            </strong>
 
-                </PieChart>
 
-            </ResponsiveContainer>
+                            <span className="priority-percent">
+
+                                {total > 0
+                                    ? `${Math.round(
+                                        (
+                                            item.value /
+                                            total
+                                        ) * 100
+                                    )}%`
+                                    : "0%"
+                                }
+
+                            </span>
+
+                        </div>
+
+                    )
+                )}
+
+            </div>
+
+        </div>
+
+    );
+
+}
+
+
+/* ============================================================
+   CUSTOM TOOLTIP
+   ============================================================ */
+
+function PriorityTooltip({
+    active,
+    payload
+}) {
+
+    if (
+        !active ||
+        !payload ||
+        !payload.length
+    ) {
+
+        return null;
+
+    }
+
+
+    const item = payload[0];
+
+
+    return (
+
+        <div className="priority-tooltip">
+
+            <span>
+                {item.name}
+            </span>
+
+            <strong>
+                {item.value} wards
+            </strong>
 
         </div>
 

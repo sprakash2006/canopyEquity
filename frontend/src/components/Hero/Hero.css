@@ -1,49 +1,356 @@
-.hero{
+/* ============================================================
+   CANOPYAI — HERO / INTELLIGENCE CENTER
+   Professional White AI + GIS Dashboard
+   UI ONLY
+   ============================================================ */
 
-display:grid;
 
-grid-template-columns:2.2fr 420px;
+/* ============================================================
+   HERO GRID
+   ============================================================ */
 
-gap:24px;
+.hero {
 
-height:560px;
+    width: 100%;
 
-margin-bottom:24px;
+    display: grid;
 
-}
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(300px, 0.82fr);
 
-.hero-left{
+    gap: 16px;
 
-height:100%;
-
-}
-
-.hero-right{
-
-height:100%;
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
+    align-items: stretch;
 
 }
 
-@media(max-width:1500px){
 
-.hero{
+/* ============================================================
+   HERO PANELS
+   ============================================================ */
 
-grid-template-columns:1fr;
+.hero-left,
+.hero-right {
 
-height:auto;
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 390px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
 
 }
 
-.hero-right{
 
-height:auto;
+/* ============================================================
+   PANEL LABEL
+   ============================================================ */
+
+.hero-panel-label {
+
+    position: absolute;
+
+    top: 13px;
+
+    left: 14px;
+
+    z-index: 20;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    height: 25px;
+
+    padding:
+        0 8px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid rgba(226, 232, 240, 0.95);
+
+    border-radius:
+        7px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.07);
+
+    color:
+        #475569;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.09em;
+
+    backdrop-filter:
+        blur(8px);
 
 }
+
+
+/* ============================================================
+   GIS STATUS
+   ============================================================ */
+
+.hero-panel-status {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.10);
+
+}
+
+
+/* ============================================================
+   AI STATUS
+   ============================================================ */
+
+.hero-ai-indicator {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        #15803d;
+
+    box-shadow:
+        0 0 0 3px rgba(21, 128, 61, 0.10);
+
+}
+
+
+/* ============================================================
+   MAP
+   ============================================================ */
+
+.hero-left > *:not(.hero-panel-label) {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* ============================================================
+   AI PANEL
+   ============================================================ */
+
+.hero-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.hero-right > *:not(.hero-panel-label) {
+
+    flex: 1;
+
+    min-height: 0;
+
+}
+
+
+/* ============================================================
+   MAPCARD OVERRIDES
+   Keeps the map contained inside the hero card
+   ============================================================ */
+
+.hero-left .map-card {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 390px;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
+
+/* ============================================================
+   AI COMMAND CENTER
+   ============================================================ */
+
+.hero-right .ai-command-center {
+
+    height: 100%;
+
+    min-height: 390px;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .hero {
+
+        grid-template-columns:
+            minmax(0, 1.4fr)
+            minmax(280px, 0.8fr);
+
+    }
+
+
+    .hero-left,
+    .hero-right {
+
+        min-height: 360px;
+
+    }
+
+
+    .hero-left .map-card,
+    .hero-right .ai-command-center {
+
+        min-height: 360px;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .hero-left,
+    .hero-right {
+
+        min-height: 390px;
+
+    }
+
+
+    .hero-left .map-card,
+    .hero-right .ai-command-center {
+
+        min-height: 390px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .hero {
+
+        gap: 12px;
+
+    }
+
+
+    .hero-left,
+    .hero-right {
+
+        min-height: 330px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .hero-left .map-card,
+    .hero-right .ai-command-center {
+
+        min-height: 330px;
+
+    }
+
+
+    .hero-panel-label {
+
+        top: 10px;
+
+        left: 10px;
+
+        height: 23px;
+
+        padding:
+            0 7px;
+
+        font-size: 7px;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero * {
+
+        transition: none !important;
+
+        animation: none !important;
+
+    }
 
 }

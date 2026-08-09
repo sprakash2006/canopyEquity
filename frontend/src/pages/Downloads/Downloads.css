@@ -1,41 +1,862 @@
-.file-info{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-}
+/* ============================================================
+   CANOPYAI — DOWNLOAD CENTER
+   Professional White Dashboard
+   UI ONLY
+   ============================================================ */
 
 
-.file-icon{
+/* ============================================================
+   PAGE
+   ============================================================ */
 
-    width:45px;
+.downloads {
 
-    height:45px;
+    width: 100%;
 
-    display:flex;
+    max-width: 1440px;
 
-    align-items:center;
+    margin: 0 auto;
 
-    justify-content:center;
-
-    border-radius:12px;
-
-    background:var(--bg-alt);
-
-    color:var(--risk-low);
+    padding:
+        4px 0 35px;
 
 }
 
 
-.download-card button{
+/* ============================================================
+   HEADER
+   ============================================================ */
 
-    display:flex;
+.downloads-header {
 
-    align-items:center;
+    display: flex;
 
-    gap:8px;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        10px 0 22px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.downloads-title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.downloads-title-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    border: 1px solid #dcfce7;
+
+}
+
+
+.downloads-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-bottom: 4px;
+
+    color: #15803d;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+.downloads-header h1 {
+
+    margin: 0;
+
+    color: #172018;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
+
+    line-height: 1.1;
+
+}
+
+
+.downloads-header p {
+
+    margin: 5px 0 0;
+
+    color: #718096;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ============================================================
+   HEADER SUMMARY
+   ============================================================ */
+
+.downloads-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 112px;
+
+    padding:
+        9px 11px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-xs);
+
+}
+
+
+.summary-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+}
+
+
+.downloads-summary div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.downloads-summary strong {
+
+    color: #172018;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+}
+
+
+.downloads-summary span {
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+}
+
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.downloads-section-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin:
+        22px 0 12px;
+
+}
+
+
+.downloads-section-header > div:first-child > span {
+
+    color: #15803d;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+.downloads-section-header h2 {
+
+    margin: 3px 0 0;
+
+    color: #172018;
+
+    font-size: 16px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.015em;
+
+}
+
+
+.ready-indicator {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 650;
+
+}
+
+
+.ready-indicator span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 163, 74, 0.08);
+
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.download-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.download-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 190px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-xs);
+
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+
+}
+
+
+.download-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #cfe3d5;
+
+    box-shadow:
+        0 8px 24px
+        rgba(15, 23, 42, 0.07);
+
+}
+
+
+/* ============================================================
+   CARD TOP
+   ============================================================ */
+
+.download-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+}
+
+
+.file-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    border: 1px solid #dcfce7;
+
+}
+
+
+.file-icon svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    stroke-width: 1.8;
+
+}
+
+
+/* ============================================================
+   READY BADGE
+   ============================================================ */
+
+.file-ready {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding:
+        4px 6px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #dcfce7;
+
+    border-radius: 999px;
+
+    color: #15803d;
+
+    font-size: 7px;
+
+    font-weight: 750;
+
+}
+
+
+/* ============================================================
+   FILE INFO
+   ============================================================ */
+
+.file-info {
+
+    min-width: 0;
+
+    margin-top: 13px;
+
+}
+
+
+.file-info h3 {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #172018;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    line-height: 1.3;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.file-info p {
+
+    margin: 5px 0 0;
+
+    overflow: hidden;
+
+    color: #94a3b8;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 7px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   FILE META
+   ============================================================ */
+
+.file-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 11px;
+
+}
+
+
+.file-type {
+
+    padding:
+        4px 6px;
+
+    background: #f8faf9;
+
+    border: 1px solid #edf1ee;
+
+    border-radius: 5px;
+
+    color: #475569;
+
+    font-size: 7px;
+
+    font-weight: 750;
+
+}
+
+
+.file-generated {
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================================
+   DOWNLOAD BUTTON
+   ============================================================ */
+
+.download-button {
+
+    width: 100%;
+
+    min-height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: auto;
+
+    padding:
+        0 10px;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 7px;
+
+    background: #f0fdf4;
+
+    color: #166534;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease,
+        transform 150ms ease;
+
+}
+
+
+.download-button:hover:not(:disabled) {
+
+    background: #dcfce7;
+
+    border-color: #86efac;
+
+    color: #14532d;
+
+}
+
+
+.download-button:active:not(:disabled) {
+
+    transform: translateY(1px);
+
+}
+
+
+.download-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: wait;
+
+}
+
+
+/* ============================================================
+   SPINNER
+   ============================================================ */
+
+.spin {
+
+    animation:
+        download-spin 0.9s linear infinite;
+
+}
+
+
+@keyframes download-spin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.download-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding:
+        11px 13px;
+
+    background: #f8fdf9;
+
+    border: 1px solid #dff0e3;
+
+    border-radius: 10px;
+
+}
+
+
+.status-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+
+.download-status > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.download-status strong {
+
+    color: #334155;
+
+    font-size: 9px;
+
+    font-weight: 750;
+
+}
+
+
+.download-status span {
+
+    margin-top: 2px;
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .download-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .downloads {
+
+        padding-bottom: 25px;
+
+    }
+
+
+    .downloads-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .downloads-header h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .downloads-summary {
+
+        min-width: auto;
+
+    }
+
+
+    .download-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .download-card {
+
+        min-height: 175px;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .downloads-header {
+
+        flex-direction: column;
+
+    }
+
+
+    .downloads-summary {
+
+        width: 100%;
+
+    }
+
+
+    .downloads-section-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .download-card {
+
+        transition: none;
+
+    }
+
+
+    .spin {
+
+        animation: none;
+
+    }
 
 }

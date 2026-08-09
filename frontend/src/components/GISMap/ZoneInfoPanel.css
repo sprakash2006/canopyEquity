@@ -1,0 +1,108 @@
+.zone-info-panel {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    z-index: 1000;
+
+    width: 280px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+
+    padding: 18px;
+
+    color: var(--text);
+    font-family: var(--font-sans);
+}
+
+
+.zone-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.zone-panel-label {
+    font-size: var(--fs-caption);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.zone-panel-header h3 {
+    margin: 0;
+    font-size: var(--fs-subhead);
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+.zone-close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.zone-close-btn:hover {
+    background: var(--bg-alt);
+    color: var(--text);
+}
+
+
+.zone-priority-chip {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: #fff;
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+}
+
+
+.zone-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.zone-stat {
+    background: var(--bg-alt);
+    padding: 10px 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.zone-stat span {
+    font-size: var(--fs-caption-sm);
+    color: var(--text-muted);
+}
+
+.zone-stat strong {
+    font-size: var(--fs-subhead-sm);
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+.zone-panel-footnote {
+    font-size: var(--fs-caption);
+    color: var(--text-muted);
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}

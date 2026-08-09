@@ -1,204 +1,523 @@
-.map-card{
+/* ============================================================
+   CANOPYAI — MAP CARD
+   Professional GIS / AI Dashboard
+   UI ONLY
+   ============================================================ */
 
-height:100%;
 
-background:var(--card);
+/* ============================================================
+   CARD
+   ============================================================ */
 
-border-radius:24px;
+.map-card {
 
-padding:25px;
+    position: relative;
 
-display:flex;
+    width: 100%;
 
-flex-direction:column;
+    height: 100%;
 
-border:1px solid var(--border);
+    min-width: 0;
 
-box-shadow:0 10px 40px rgba(0,0,0,.06);
+    display: flex;
 
-}
+    flex-direction: column;
 
-.map-header{
+    background: #ffffff;
 
-display:flex;
+    border: 1px solid var(--border);
 
-justify-content:space-between;
+    border-radius: 14px;
 
-align-items:center;
-
-margin-bottom:20px;
-
-}
-
-.map-header h2{
-
-color:var(--text);
-
-margin:0;
-
-font-size:22px;
+    overflow: hidden;
 
 }
 
-.map-header p{
 
-margin-top:6px;
+/* ============================================================
+   HEADER
+   ============================================================ */
 
-color:var(--text-muted);
+.map-header {
 
-font-size:var(--fs-body);
+    min-height: 62px;
 
-}
+    flex: 0 0 62px;
 
-.map-actions{
+    display: flex;
 
-display:flex;
+    align-items: center;
 
-gap:12px;
+    justify-content: space-between;
 
-}
+    gap: 16px;
 
-.map-actions button{
+    padding:
+        10px 14px;
 
-border:none;
+    background: #ffffff;
 
-padding:12px 16px;
-
-background:var(--bg-alt);
-
-border-radius:12px;
-
-color:var(--text);
-
-display:flex;
-
-gap:8px;
-
-align-items:center;
-
-cursor:pointer;
-
-transition:.3s;
+    border-bottom: 1px solid var(--border);
 
 }
 
-.map-actions button:hover{
 
-background:var(--border);
+/* ============================================================
+   TITLE
+   ============================================================ */
 
-}
+.map-header-title {
 
-.map-body{
+    min-width: 0;
 
-    height:700px;
+    display: flex;
 
-    background:var(--bg-alt);
+    align-items: center;
 
-    border-radius:20px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    margin-bottom:20px;
+    gap: 9px;
 
 }
 
-.map-placeholder{
 
-display:flex;
+.map-title-icon {
 
-flex-direction:column;
+    width: 32px;
 
-align-items:center;
+    height: 32px;
 
-color:var(--text-muted);
+    flex: 0 0 32px;
 
-gap:15px;
+    display: flex;
 
-}
+    align-items: center;
 
-.map-placeholder svg{
+    justify-content: center;
 
-color:var(--brand-primary);
+    border-radius: 8px;
 
-}
+    background: #f0fdf4;
 
-.map-placeholder h2{
-
-margin:0;
-
-color:var(--text);
+    color: #15803d;
 
 }
 
-.legend{
 
-display:flex;
+.map-header h2 {
 
-justify-content:center;
+    margin: 0;
 
-gap:35px;
+    color: #172018;
 
-flex-wrap:wrap;
+    font-size: 14px;
 
-}
+    font-weight: 750;
 
-.legend div{
+    letter-spacing: -0.015em;
 
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-color:var(--text-muted);
-
-font-size:var(--fs-body);
+    line-height: 1.2;
 
 }
 
-.legend span{
 
-width:14px;
+.map-header p {
 
-height:14px;
+    margin: 3px 0 0;
 
-border-radius:4px;
+    color: #94a3b8;
 
-}
+    font-size: 9px;
 
-.green{
+    font-weight: 500;
 
-background:var(--risk-low);
-
-}
-
-.yellow{
-
-background:var(--risk-moderate);
+    line-height: 1.2;
 
 }
 
-.blue{
 
-background:#2f6fed;
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.map-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex: 0 0 auto;
 
 }
 
-.gray{
 
-background:var(--border-strong);
+.map-actions button {
+
+    min-height: 31px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding:
+        0 9px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease,
+        box-shadow 150ms ease;
 
 }
-.lightgreen{
 
-background:var(--brand-secondary-alt);
+
+.map-actions button:hover {
+
+    background: #f0fdf4;
+
+    color: #166534;
+
+    border-color: #bbf7d0;
+
+    box-shadow: var(--shadow-xs);
 
 }
 
-.orange{
 
-background:var(--risk-high);
+.map-actions .map-icon-button {
+
+    width: 31px;
+
+    padding: 0;
+
+}
+
+
+/* ============================================================
+   MAP BODY
+   ============================================================ */
+
+.map-body {
+
+    position: relative;
+
+    flex: 1;
+
+    min-height: 0;
+
+    width: 100%;
+
+    background: #eef2ef;
+
+    overflow: hidden;
+
+}
+
+
+/*
+   The GISMap component should fill the available area.
+*/
+
+.map-body > * {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* ============================================================
+   STATUS BAR
+   ============================================================ */
+
+.map-status-bar {
+
+    min-height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding:
+        0 13px;
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+/* ============================================================
+   STATUS LEFT
+   ============================================================ */
+
+.map-status-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+}
+
+
+.map-status-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   LEGEND DOTS
+   ============================================================ */
+
+.map-status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    border-radius: 50%;
+
+}
+
+
+.map-status-dot.active {
+
+    background: #15803d;
+
+    box-shadow:
+        0 0 0 3px rgba(21, 128, 61, 0.10);
+
+}
+
+
+.map-status-dot.canopy {
+
+    background: #22c55e;
+
+}
+
+
+.map-status-dot.water {
+
+    background: #2563eb;
+
+}
+
+
+.map-status-dot.urban {
+
+    background: #94a3b8;
+
+}
+
+
+/* ============================================================
+   STATUS RIGHT
+   ============================================================ */
+
+.map-status-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.map-status-right svg {
+
+    color: #16a34a;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .map-header {
+
+        padding:
+            9px 11px;
+
+    }
+
+
+    .map-actions button span {
+
+        display: none;
+
+    }
+
+
+    .map-actions button {
+
+        width: 31px;
+
+        padding: 0;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .map-header {
+
+        min-height: 57px;
+
+        flex-basis: 57px;
+
+    }
+
+
+    .map-header h2 {
+
+        font-size: 13px;
+
+    }
+
+
+    .map-header p {
+
+        display: none;
+
+    }
+
+
+    .map-title-icon {
+
+        width: 29px;
+
+        height: 29px;
+
+        flex-basis: 29px;
+
+    }
+
+
+    .map-actions {
+
+        gap: 3px;
+
+    }
+
+
+    .map-status-bar {
+
+        padding:
+            0 9px;
+
+    }
+
+
+    .map-status-left {
+
+        gap: 8px;
+
+    }
+
+
+    .map-status-right {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .map-status-item:nth-child(3),
+    .map-status-item:nth-child(4) {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .map-actions button {
+
+        transition: none;
+
+    }
 
 }

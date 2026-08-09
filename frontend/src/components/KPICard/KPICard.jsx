@@ -2,7 +2,6 @@ import "./KPICard.css";
 import { motion } from "framer-motion";
 
 export default function KPICard({
-
     title,
     value,
     subtitle,
@@ -10,52 +9,42 @@ export default function KPICard({
     color = "#22c55e",
     loading = false,
     trend = null
+}) {
 
-}){
-
-    return(
+    return (
 
         <motion.div
 
             className="kpi-card"
 
+            style={{
+                "--kpi-accent": color
+            }}
+
             whileHover={{
-
-                y:-8,
-
-                scale:1.02
-
+                y: -3
             }}
 
             transition={{
-
-                duration:.25
-
+                duration: 0.18
             }}
 
         >
 
+            {/* =================================================
+                TOP ROW
+            ================================================= */}
+
             <div className="kpi-top">
 
-                <div
-
-                    className="icon-box"
-
-                    style={{
-
-                        background:color
-
-                    }}
-
-                >
+                <div className="icon-box">
 
                     {icon}
 
                 </div>
 
-                {
 
-                    trend &&
+                {trend && (
 
                     <div className="trend">
 
@@ -63,48 +52,54 @@ export default function KPICard({
 
                     </div>
 
-                }
+                )}
 
             </div>
 
+
+            {/* =================================================
+                TITLE
+            ================================================= */}
+
             <h4>
-
                 {title}
-
             </h4>
 
-            {
 
-                loading ?
+            {/* =================================================
+                VALUE
+            ================================================= */}
 
-                (
+            {loading ? (
 
-                    <div className="loading"/>
+                <div className="loading" />
 
-                )
+            ) : (
 
-                :
+                <h2>
+                    {value}
+                </h2>
 
-                (
+            )}
 
-                    <h2>
 
-                        {value}
-
-                    </h2>
-
-                )
-
-            }
+            {/* =================================================
+                SUBTITLE
+            ================================================= */}
 
             <p>
-
                 {subtitle}
-
             </p>
+
+
+            {/* =================================================
+                ACCENT
+            ================================================= */}
+
+            <div className="kpi-accent-line" />
 
         </motion.div>
 
-    )
+    );
 
 }

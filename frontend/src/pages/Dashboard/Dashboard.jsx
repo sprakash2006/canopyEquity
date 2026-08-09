@@ -19,8 +19,11 @@ import {
     Thermometer,
     Coins,
     Globe,
-    Target
+    Target,
+    Activity,
+    Sparkles
 } from "lucide-react";
+
 
 export default function Dashboard() {
 
@@ -29,11 +32,14 @@ export default function Dashboard() {
     const [dashboard, setDashboard] = useState([]);
 
     const [recommendations, setRecommendations] = useState([]);
+
     const [ai, setAI] = useState({});
 
     const [loading, setLoading] = useState(true);
 
-    const [backendStatus, setBackendStatus] = useState("Offline");
+    const [backendStatus, setBackendStatus] =
+        useState("Offline");
+
 
     // ==========================================================
     // LOAD DASHBOARD
@@ -51,37 +57,57 @@ export default function Dashboard() {
 
             }
 
+
             const response = await getDashboard();
 
-            console.log("========== DASHBOARD RESPONSE ==========");
-console.log("FULL RESPONSE:", response.data);
-console.log("SUMMARY:", response.data.summary);
-console.log("DASHBOARD:", response.data.dashboard);
-console.log("RECOMMENDATIONS:", response.data.recommendations);
-console.log("=======================================");
+
+            console.log(
+                "========== DASHBOARD RESPONSE =========="
+            );
+
+            console.log(
+                "FULL RESPONSE:",
+                response.data
+            );
+
+            console.log(
+                "SUMMARY:",
+                response.data.summary
+            );
+
+            console.log(
+                "DASHBOARD:",
+                response.data.dashboard
+            );
+
+            console.log(
+                "RECOMMENDATIONS:",
+                response.data.recommendations
+            );
+
+            console.log(
+                "========================================"
+            );
+
 
             setSummary(
-
                 response.data.summary || {}
-
             );
+
 
             setDashboard(
-
                 response.data.dashboard || []
-
             );
+
 
             setRecommendations(
-
                 response.data.recommendations || []
-
             );
+
+
             setAI(
-
-    response.data.ai || {}
-
-);
+                response.data.ai || {}
+            );
 
         }
 
@@ -101,6 +127,7 @@ console.log("=======================================");
 
     };
 
+
     // ==========================================================
     // INITIAL LOAD
     // ==========================================================
@@ -109,18 +136,18 @@ console.log("=======================================");
 
         loadDashboard();
 
-        // Refresh every 10 sec
+
         const interval = setInterval(
-
             loadDashboard,
-
             10000
-
         );
 
-        return () => clearInterval(interval);
+
+        return () =>
+            clearInterval(interval);
 
     }, []);
+
 
     // ==========================================================
     // FORMAT SCORE
@@ -128,196 +155,459 @@ console.log("=======================================");
 
     const score = (value) => {
 
-        if (value === undefined || value === null)
+        if (
+            value === undefined ||
+            value === null
+        ) {
 
             return "--";
+
+        }
+
 
         return Number(value).toFixed(2);
 
     };
 
+
     return (
 
         <div className="dashboard">
 
-            {/* ================= KPI ================= */}
 
-            <section className="kpi-grid">
+            {/* ==================================================
+                PAGE INTRO
+            ================================================== */}
 
-                <KPICard
+            <section className="dashboard-intro">
 
-                    title="Total Wards"
+                <div className="dashboard-intro-copy">
 
-                    value={
+                    <div className="dashboard-eyebrow">
 
-                        loading
+                        <Activity
+                            size={13}
+                            strokeWidth={2.2}
+                        />
 
+                        CITY INTELLIGENCE
+
+                    </div>
+
+
+                    <h1>
+                        Urban Tree Intelligence
+                    </h1>
+
+
+                    <p>
+                        AI-powered spatial analysis for
+                        canopy equity and planting priorities.
+                    </p>
+
+                </div>
+
+
+                <div className="dashboard-status">
+
+                    <span className="dashboard-status-dot" />
+
+                    <div>
+
+                        <strong>
+                            System Operational
+                        </strong>
+
+                        <span>
+                            AI analysis services connected
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {/* ==================================================
+                PRIMARY KPI
+            ================================================== */}
+
+            <section className="primary-kpi">
+
+                <div className="primary-kpi-main">
+
+                    <div className="primary-kpi-icon">
+
+                        <Trees
+                            size={22}
+                            strokeWidth={2}
+                        />
+
+                    </div>
+
+
+                    <div className="primary-kpi-content">
+
+                        <span className="primary-kpi-label">
+                            WARDS ANALYZED
+                        </span>
+
+
+                        <strong>
+
+                            {loading
+                                ? "..."
+                                : summary.total_wards ?? "--"
+                            }
+
+                        </strong>
+
+
+                        <span className="primary-kpi-description">
+                            Urban areas processed by the AI pipeline
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div className="primary-kpi-divider" />
+
+
+                <div className="primary-kpi-highlight">
+
+                    <span>
+                        TOP PRIORITY
+                    </span>
+
+
+                    <strong>
+
+                        {loading
                             ? "..."
-
-                            : summary.total_wards ?? "--"
-
-                    }
-
-                    subtitle="Analyzed"
-
-                    icon={<Trees size={26}/>}
-
-                    color="#22c55e"
-
-                />
-
-                <KPICard
-
-                    title="Top Ward"
-
-                    value={
-
-                        loading
-
-                            ? "..."
-
                             : summary.top_ward ?? "--"
+                        }
 
-                    }
+                    </strong>
 
-                    subtitle="Highest Priority"
 
-                    icon={<Leaf size={26}/>}
+                    <small>
+                        Highest impact area
+                    </small>
 
-                    color="#16a34a"
+                </div>
 
-                />
 
-                <KPICard
+                <div className="primary-kpi-score">
 
-                    title="Highest Score"
+                    <span>
+                        MAX IMPACT
+                    </span>
 
-                    value={
 
-                        loading
+                    <strong>
 
+                        {loading
                             ? "..."
-
                             : score(summary.highest_score)
+                        }
 
-                    }
+                    </strong>
 
-                    subtitle="Maximum Impact"
 
-                    icon={<Thermometer size={26}/>}
+                    <small>
+                        Priority score
+                    </small>
 
-                    color="#f97316"
+                </div>
 
-                />
+            </section>
 
-                <KPICard
 
-                    title="Average Score"
+            {/* ==================================================
+                SECONDARY KPI GRID
+            ================================================== */}
 
-                    value={
+            <section className="secondary-kpi-grid">
 
-                        loading
 
-                            ? "..."
+                <div className="dashboard-kpi-wrapper">
 
-                            : score(summary.average_score)
+                    <KPICard
+                        title="Average Score"
+                        value={
+                            loading
+                                ? "..."
+                                : score(
+                                    summary.average_score
+                                )
+                        }
+                        subtitle="City Average"
+                        icon={
+                            <Coins size={23} />
+                        }
+                        color="#16a34a"
+                    />
 
-                    }
+                </div>
 
-                    subtitle="City Average"
 
-                    icon={<Coins size={26}/>}
+                <div className="dashboard-kpi-wrapper">
 
-                    color="#3b82f6"
+                    <KPICard
+                        title="Lowest Score"
+                        value={
+                            loading
+                                ? "..."
+                                : score(
+                                    summary.lowest_score
+                                )
+                        }
+                        subtitle="Minimum Impact"
+                        icon={
+                            <Globe size={23} />
+                        }
+                        color="#64748b"
+                    />
 
-                />
+                </div>
 
-                <KPICard
 
-                    title="Lowest Score"
+                <div className="dashboard-kpi-wrapper">
 
-                    value={
+                    <KPICard
+                        title="AI Engine"
+                        value={
+                            ai?.model ||
+                            "SegFormer"
+                        }
+                        subtitle="Semantic Segmentation"
+                        icon={
+                            <Sparkles size={23} />
+                        }
+                        color="#15803d"
+                    />
 
-                        loading
+                </div>
 
-                            ? "..."
 
-                            : score(summary.lowest_score)
+                <div className="dashboard-kpi-wrapper">
 
-                    }
+                    <KPICard
+                        title="Backend Status"
+                        value={backendStatus}
+                        subtitle="FastAPI"
+                        icon={
+                            <Target size={23} />
+                        }
+                        color={
+                            backendStatus === "Online"
+                                ? "#16a34a"
+                                : "#ef4444"
+                        }
+                    />
 
-                    subtitle="Minimum Impact"
+                </div>
 
-                    icon={<Globe size={26}/>}
+            </section>
 
-                    color="#06b6d4"
 
-                />
+            {/* ==================================================
+                HERO / AI COMMAND CENTER
+            ================================================== */}
 
-                <KPICard
+            <section className="dashboard-hero-section">
 
-                    title="Backend Status"
+                <div className="dashboard-section-heading">
 
-                    value={backendStatus}
+                    <div>
 
-                    subtitle="FastAPI"
+                        <div className="section-eyebrow">
 
-                    icon={<Target size={26}/>}
+                            <Sparkles
+                                size={13}
+                            />
 
-                    color={
+                            AI COMMAND CENTER
 
-                        backendStatus === "Online"
+                        </div>
 
-                            ? "#22c55e"
 
-                            : "#ef4444"
+                        <h2>
+                            Intelligence Overview
+                        </h2>
 
-                    }
+                    </div>
 
+
+                    <span className="section-live">
+
+                        <span />
+
+                        LIVE ANALYSIS
+
+                    </span>
+
+                </div>
+
+
+                <Hero
+                    ai={ai}
+                    backendStatus={backendStatus}
                 />
 
             </section>
 
-            {/* ================= HERO ================= */}
-<Hero
 
-    ai={ai}
+            {/* ==================================================
+                ANALYTICS
+            ================================================== */}
 
-    backendStatus={backendStatus}
+            <section className="dashboard-analytics-section">
 
-/>
+                <div className="dashboard-section-heading">
 
-            {/* ================= ANALYTICS ================= */}
+                    <div>
 
-            <Analytics
+                        <div className="section-eyebrow">
+                            SPATIAL INSIGHTS
+                        </div>
 
-                dashboard={dashboard}
+                        <h2>
+                            Impact Analytics
+                        </h2>
 
-                summary={summary}
+                    </div>
 
-            />
+                </div>
 
-            {/* ================= BOTTOM ================= */}
 
-            <section className="bottom-grid">
-
-                <WardRanking
-
-                    wards={dashboard}
-
-                />
-
-                <Recommendation
-
-                    recommendations={recommendations}
-
+                <Analytics
+                    dashboard={dashboard}
+                    summary={summary}
                 />
 
             </section>
 
-            {/* ================= PIPELINE ================= */}
 
-            <ProgressTracker />
+            {/* ==================================================
+                RANKING + RECOMMENDATIONS
+            ================================================== */}
+
+            <section className="dashboard-bottom-section">
+
+
+                <div className="dashboard-panel">
+
+                    <div className="dashboard-panel-header">
+
+                        <div>
+
+                            <span className="panel-eyebrow">
+                                PRIORITY AREAS
+                            </span>
+
+                            <h2>
+                                Ward Ranking
+                            </h2>
+
+                            <p>
+                                Highest-impact locations identified by AI
+                            </p>
+
+                        </div>
+
+
+                        <div className="panel-icon">
+
+                            <Leaf
+                                size={18}
+                            />
+
+                        </div>
+
+                    </div>
+
+
+                    <WardRanking
+                        wards={dashboard}
+                    />
+
+                </div>
+
+
+                <div className="dashboard-panel">
+
+                    <div className="dashboard-panel-header">
+
+                        <div>
+
+                            <span className="panel-eyebrow">
+                                AI DECISIONS
+                            </span>
+
+                            <h2>
+                                Planting Recommendations
+                            </h2>
+
+                            <p>
+                                Optimized interventions for priority zones
+                            </p>
+
+                        </div>
+
+
+                        <div className="panel-icon recommendation-icon">
+
+                            <Trees
+                                size={18}
+                            />
+
+                        </div>
+
+                    </div>
+
+
+                    <Recommendation
+                        recommendations={
+                            recommendations
+                        }
+                    />
+
+                </div>
+
+            </section>
+
+
+            {/* ==================================================
+                AI PIPELINE
+            ================================================== */}
+
+            <section className="dashboard-pipeline-section">
+
+                <div className="dashboard-section-heading">
+
+                    <div>
+
+                        <div className="section-eyebrow">
+                            PROCESSING STATUS
+                        </div>
+
+                        <h2>
+                            AI Pipeline
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <ProgressTracker />
+
+            </section>
+
 
         </div>
 

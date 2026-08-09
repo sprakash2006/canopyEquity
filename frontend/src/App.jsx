@@ -13,38 +13,68 @@ import Downloads from "./pages/Downloads/Downloads";
 import Settings from "./pages/Settings/Settings";
 
 function App() {
-  return (
-    <Routes>
+    return (
+        <Routes>
 
-      <Route path="/" element={<DashboardLayout />}>
+            <Route
+                path="/"
+                element={<DashboardLayout />}
+            >
 
-        <Route index element={<Dashboard />} />
+                <Route
+                    index
+                    element={<Dashboard />}
+                />
 
-        <Route path="upload" element={<Upload />} />
+                <Route
+                    path="upload"
+                    element={<Upload />}
+                />
 
-        <Route path="analysis" element={<Analysis />} />
+                <Route
+                    path="analysis"
+                    element={<Analysis />}
+                />
 
-        <Route path="map" element={<MapViewer />} />
+                <Route
+                    path="map"
+                    element={<MapViewer />}
+                />
 
-        <Route path="ranking" element={<Ranking />} />
+                <Route
+                    path="ranking"
+                    element={<Ranking />}
+                />
 
-        <Route
-          path="recommendations"
-          element={<Recommendations />}
-        />
+                <Route
+                    path="recommendations"
+                    element={<Recommendations />}
+                />
 
-        <Route path="reports" element={<Reports />} />
+                <Route
+                    path="reports"
+                    element={<Reports />}
+                />
 
-        <Route path="downloads" element={<Downloads />} />
+                <Route
+                    path="downloads"
+                    element={<Downloads />}
+                />
 
-        <Route path="settings" element={<Settings />} />
+                <Route
+                    path="settings"
+                    element={<Settings />}
+                />
 
-      </Route>
+            </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+            <Route
+                path="*"
+                element={<Navigate to="/" replace />}
+            />
 
-    </Routes>
-  );
+        </Routes>
+    );
 }
 
 export default App;

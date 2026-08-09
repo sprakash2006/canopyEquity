@@ -1,144 +1,358 @@
-.kpi-card{
+/* ============================================================
+   CANOPYAI — KPI CARD
+   Professional White Dashboard
+   UI ONLY
+   ============================================================ */
 
-background:var(--card);
 
-border:1px solid var(--border);
+/* ============================================================
+   CARD
+   ============================================================ */
 
-border-radius:22px;
+.kpi-card {
 
-padding:22px;
+    position: relative;
 
-transition:.3s;
+    min-width: 0;
 
-cursor:pointer;
+    min-height: 148px;
 
-box-shadow:0 10px 40px rgba(0,0,0,.06);
+    display: flex;
 
-}
+    flex-direction: column;
 
-.kpi-card:hover{
+    padding: 17px 18px;
 
-border-color:var(--brand-secondary-alt);
+    background: #ffffff;
 
-box-shadow:0 20px 50px rgba(0,45,28,.10);
+    border: 1px solid var(--border);
 
-}
+    border-radius: 13px;
 
-.kpi-top{
+    box-shadow: var(--shadow-xs);
 
-display:flex;
+    overflow: hidden;
 
-justify-content:space-between;
+    cursor: default;
 
-align-items:center;
-
-margin-bottom:20px;
-
-}
-
-.icon-box{
-
-width:58px;
-
-height:58px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-border-radius:18px;
-
-color:#fff;
-
-font-size:22px;
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease;
 
 }
 
-.trend{
 
-background:var(--risk-low-bg);
+/* ============================================================
+   HOVER
+   ============================================================ */
 
-color:var(--risk-low);
+.kpi-card:hover {
 
-padding:8px 14px;
+    border-color: #d9e6dd;
 
-border-radius:50px;
-
-font-size:var(--fs-body-sm);
-
-font-weight:700;
+    box-shadow: var(--shadow-md);
 
 }
 
-.kpi-card h4{
 
-color:var(--text-muted);
+/* ============================================================
+   TOP
+   ============================================================ */
 
-font-weight:500;
+.kpi-top {
 
-margin:10px 0;
+    display: flex;
 
-font-size:15px;
+    align-items: center;
 
-}
+    justify-content: space-between;
 
-.kpi-card h2{
+    min-height: 34px;
 
-font-size:var(--fs-title-lg);
-
-color:var(--text);
-
-margin:8px 0;
-
-font-weight:700;
+    margin-bottom: 14px;
 
 }
 
-.kpi-card p{
 
-margin:0;
+/* ============================================================
+   ICON
+   ============================================================ */
 
-color:var(--text-muted);
+.icon-box {
 
-font-size:var(--fs-body-sm);
+    width: 36px;
+
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--kpi-accent) 11%,
+            white
+        );
+
+    color: var(--kpi-accent);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--kpi-accent) 15%,
+            white
+        );
+
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.kpi-card h4 {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+
+    line-height: 1.2;
 
 }
 
-.loading{
 
-height:38px;
+/* ============================================================
+   VALUE
+   ============================================================ */
 
-width:70%;
+.kpi-card h2 {
 
-border-radius:10px;
+    margin: 6px 0 0;
 
-background:linear-gradient(
-90deg,
-var(--bg-alt),
-var(--border),
-var(--bg-alt)
-);
+    max-width: 100%;
 
-background-size:300%;
+    overflow: hidden;
 
-animation:loading 1.2s infinite;
+    color: #172018;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
+
+    line-height: 1.1;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   SUBTITLE
+   ============================================================ */
+
+.kpi-card p {
+
+    margin: 6px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 550;
+
+    line-height: 1.3;
 
 }
 
-@keyframes loading{
 
-0%{
+/* ============================================================
+   TREND
+   ============================================================ */
 
-background-position:0%;
+.trend {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    max-width: 90px;
+
+    min-height: 22px;
+
+    padding:
+        3px 7px;
+
+    border-radius: 999px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    font-size: 8px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
 
 }
 
-100%{
 
-background-position:300%;
+/* ============================================================
+   ACCENT LINE
+   ============================================================ */
+
+.kpi-accent-line {
+
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 0;
+
+    width: 26px;
+
+    height: 2px;
+
+    border-radius:
+        3px 3px 0 0;
+
+    background:
+        var(--kpi-accent);
+
+    opacity: 0.75;
 
 }
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.loading {
+
+    width: 72px;
+
+    height: 25px;
+
+    margin-top: 6px;
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f1f5f9 25%,
+            #e2e8f0 50%,
+            #f1f5f9 75%
+        );
+
+    background-size: 200% 100%;
+
+    animation:
+        kpi-shimmer 1.4s infinite;
+
+}
+
+
+@keyframes kpi-shimmer {
+
+    0% {
+
+        background-position:
+            200% 0;
+
+    }
+
+    100% {
+
+        background-position:
+            -200% 0;
+
+    }
+
+}
+
+
+/* ============================================================
+   LONG VALUES
+   ============================================================ */
+
+.kpi-card h2 {
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .kpi-card {
+
+        min-height: 135px;
+
+        padding:
+            15px 16px;
+
+    }
+
+
+    .kpi-top {
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .kpi-card h2 {
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .kpi-card {
+
+        transition: none;
+
+    }
+
+
+    .loading {
+
+        animation: none;
+
+    }
 
 }

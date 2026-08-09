@@ -217,6 +217,54 @@ class PlantabilityEngine:
 
 
 
+        # ==================================================
+        # NDVI SANITY CORRECTION
+        # ==================================================
+        # A pixel with high NDVI already has vegetation
+        # regardless of the land-cover class.  This catches
+        # dense-canopy areas the classifier mislabels as
+        # "grass" (Cantonment Ridge, Lutyens' Delhi) and
+        # stops them from scoring as prime plantation sites.
+
+        ndvi = rasters.get("ndvi")
+
+        if ndvi is not None:
+
+            # NDVI ≥ 0.4 -> already vegetated -> plant = 0
+            # NDVI ≤ 0.1 -> bare -> no penalty
+            # linear in between.
+
+            existing_veg = np.clip(
+
+                (ndvi - 0.1) / 0.3,
+
+                0.0,
+
+                1.0
+
+            )
+
+
+            # Unknown NDVI -> treat as partially vegetated,
+            # so we don't hand out prime scores in data-gap
+            # zones (Cantonment, restricted areas, etc.)
+
+            existing_veg = np.where(
+
+                np.isnan(existing_veg),
+
+                0.5,
+
+                existing_veg
+
+            )
+
+
+            plantability = plantability * (1.0 - existing_veg)
+
+
+
+
 
 
         # ==================================================

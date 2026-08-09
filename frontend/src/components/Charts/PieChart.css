@@ -1,0 +1,408 @@
+/* ============================================================
+   CANOPYAI — PRIORITY DISTRIBUTION CHART
+   UI ONLY
+   ============================================================ */
+
+.priority-chart {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 240px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 0.9fr)
+        minmax(160px, 1fr);
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* ============================================================
+   CHART VISUAL
+   ============================================================ */
+
+.priority-chart-visual {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 235px;
+
+}
+
+
+.priority-chart-visual
+.recharts-responsive-container {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+}
+
+
+/* ============================================================
+   CENTER VALUE
+   ============================================================ */
+
+.priority-center {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+
+}
+
+
+.priority-center strong {
+
+    color: #172018;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.priority-center span {
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+/* ============================================================
+   LEGEND
+   ============================================================ */
+
+.priority-legend {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.priority-legend-item {
+
+    display: grid;
+
+    grid-template-columns:
+        7px
+        minmax(0, 1fr)
+        28px
+        30px;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 30px;
+
+    padding:
+        0 8px;
+
+    border-radius: 7px;
+
+    transition:
+        background 150ms ease;
+
+}
+
+
+.priority-legend-item:hover {
+
+    background: #f8faf9;
+
+}
+
+
+/* ============================================================
+   DOT
+   ============================================================ */
+
+.priority-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+}
+
+
+/* ============================================================
+   NAME
+   ============================================================ */
+
+.priority-name {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 650;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   COUNT
+   ============================================================ */
+
+.priority-value {
+
+    color: #334155;
+
+    font-size: 9px;
+
+    font-weight: 750;
+
+    text-align: right;
+
+}
+
+
+/* ============================================================
+   PERCENTAGE
+   ============================================================ */
+
+.priority-percent {
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+}
+
+
+/* ============================================================
+   TOOLTIP
+   ============================================================ */
+
+.priority-tooltip {
+
+    min-width: 105px;
+
+    padding:
+        8px 10px;
+
+    background: rgba(23, 32, 24, 0.96);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.18);
+
+}
+
+
+.priority-tooltip span {
+
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 8px;
+
+    font-weight: 650;
+
+}
+
+
+.priority-tooltip strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+}
+
+
+/* ============================================================
+   REMOVE RECHARTS DEFAULT OUTLINE
+   ============================================================ */
+
+.recharts-pie-sector {
+
+    outline: none;
+
+}
+
+
+.recharts-wrapper {
+
+    outline: none;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .priority-chart {
+
+        grid-template-columns:
+            minmax(200px, 0.8fr)
+            minmax(220px, 1fr);
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .priority-chart {
+
+        grid-template-columns:
+            1fr;
+
+        min-height: 260px;
+
+    }
+
+
+    .priority-chart-visual {
+
+        height: 190px;
+
+    }
+
+
+    .priority-legend {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 3px;
+
+    }
+
+
+    .priority-legend-item {
+
+        min-height: 27px;
+
+        padding:
+            0 6px;
+
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .priority-chart-visual {
+
+        height: 175px;
+
+    }
+
+
+    .priority-center strong {
+
+        font-size: 22px;
+
+    }
+
+
+    .priority-legend {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .priority-legend-item {
+
+        transition: none;
+
+    }
+
+}

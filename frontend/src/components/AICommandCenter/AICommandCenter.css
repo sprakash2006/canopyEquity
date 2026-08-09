@@ -1,119 +1,696 @@
-.command-center{
+/* ============================================================
+   CANOPYAI — AI COMMAND CENTER
+   Professional White AI Dashboard
+   UI ONLY
+   ============================================================ */
 
-height:100%;
 
-background:var(--card);
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
 
-border-radius:24px;
+.command-center {
 
-padding:24px;
+    width: 100%;
 
-border:1px solid var(--border);
+    height: 100%;
 
-display:flex;
+    min-height: 390px;
 
-flex-direction:column;
+    display: flex;
 
-}
+    flex-direction: column;
 
-.command-header{
+    padding: 16px;
 
-margin-bottom:22px;
+    background: #ffffff;
 
-}
-
-.command-header h2{
-
-margin:0;
-
-color:var(--text);
-
-font-size:24px;
+    overflow: hidden;
 
 }
 
-.command-header p{
 
-margin-top:6px;
+/* ============================================================
+   HEADER
+   ============================================================ */
 
-color:var(--text-muted);
+.command-header {
 
-}
+    display: flex;
 
-.command-grid{
+    align-items: center;
 
-display:grid;
+    justify-content: space-between;
 
-grid-template-columns:1fr;
+    gap: 10px;
 
-gap:15px;
+    padding-bottom: 13px;
 
-overflow:auto;
-
-}
-
-.command-item{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-padding:18px;
-
-border-radius:18px;
-
-background:var(--bg-alt);
-
-transition:.3s;
-
-cursor:pointer;
+    border-bottom: 1px solid var(--border-light);
 
 }
 
-.command-item:hover{
 
-background:var(--border);
+.command-title {
 
-transform:translateY(-4px);
+    display: flex;
 
-}
+    align-items: center;
 
-.command-icon{
+    gap: 9px;
 
-width:54px;
-
-height:54px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:var(--brand-secondary-alt);
-
-color:#fff;
-
-border-radius:16px;
+    min-width: 0;
 
 }
 
-.command-item span{
 
-color:var(--text-muted);
+.command-main-icon {
 
-font-size:var(--fs-body-sm);
+    width: 33px;
+
+    height: 33px;
+
+    flex: 0 0 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
 
 }
 
-.command-item h3{
 
-margin-top:6px;
+.command-header h2 {
 
-color:var(--text);
+    margin: 0;
 
-font-size:var(--fs-subhead);
+    color: #172018;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.015em;
+
+}
+
+
+.command-header p {
+
+    margin: 3px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+}
+
+
+/* ============================================================
+   READY STATUS
+   ============================================================ */
+
+.command-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-height: 21px;
+
+    padding:
+        0 7px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 999px;
+
+    color: #15803d;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+
+}
+
+
+.command-status-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.08);
+
+}
+
+
+/* ============================================================
+   MODEL SUMMARY
+   ============================================================ */
+
+.command-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1px 1fr 1px 0.7fr;
+
+    align-items: center;
+
+    min-height: 65px;
+
+    margin-top: 12px;
+
+    padding:
+        10px;
+
+    background: #f8faf9;
+
+    border:
+        1px solid #eef2ef;
+
+    border-radius: 10px;
+
+}
+
+
+.command-summary-label {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+        0 8px;
+
+}
+
+
+.command-summary-label span {
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.command-summary-label strong {
+
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.command-summary-divider {
+
+    width: 1px;
+
+    height: 28px;
+
+    background: #e2e8e4;
+
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.command-grid {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 7px;
+
+    margin-top: 11px;
+
+}
+
+
+/* ============================================================
+   ITEM
+   ============================================================ */
+
+.command-item {
+
+    min-width: 0;
+
+    min-height: 57px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        8px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #edf0ee;
+
+    border-radius: 9px;
+
+    transition:
+        background 150ms ease,
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        transform 150ms ease;
+
+}
+
+
+.command-item:hover {
+
+    background: #fafffb;
+
+    border-color: #d9e6dd;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.05);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================================================
+   FEATURED MODEL
+   ============================================================ */
+
+.command-item-featured {
+
+    background: #f8fdf9;
+
+    border-color: #d7eadb;
+
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.command-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+}
+
+
+.command-icon svg {
+
+    width: 14px;
+
+    height: 14px;
+
+    stroke-width: 1.9;
+
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.command-item-content {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.command-item-content span {
+
+    overflow: hidden;
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.025em;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.command-item-content h3 {
+
+    margin: 3px 0 0;
+
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 9px;
+
+    font-weight: 750;
+
+    line-height: 1.2;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.command-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    min-height: 26px;
+
+    margin-top: 9px;
+
+    padding-top: 8px;
+
+    border-top: 1px solid var(--border-light);
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+}
+
+
+.command-footer > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #64748b;
+
+}
+
+
+.command-footer-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .command-center {
+
+        padding: 14px;
+
+    }
+
+
+    .command-grid {
+
+        gap: 6px;
+
+    }
+
+
+    .command-item {
+
+        padding: 7px;
+
+    }
+
+
+    .command-summary-label strong {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .command-center {
+
+        min-height: 390px;
+
+    }
+
+
+    .command-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .command-center {
+
+        min-height: 330px;
+
+        padding: 13px;
+
+    }
+
+
+    .command-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+
+    .command-summary {
+
+        min-height: 58px;
+
+    }
+
+
+    .command-summary-label {
+
+        padding: 0 5px;
+
+    }
+
+
+    .command-summary-label strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .command-item {
+
+        min-height: 52px;
+
+        gap: 5px;
+
+        padding: 6px;
+
+    }
+
+
+    .command-icon {
+
+        width: 24px;
+
+        height: 24px;
+
+        flex-basis: 24px;
+
+    }
+
+
+    .command-icon svg {
+
+        width: 12px;
+
+        height: 12px;
+
+    }
+
+
+    .command-item-content h3 {
+
+        font-size: 8px;
+
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .command-header p {
+
+        display: none;
+
+    }
+
+
+    .command-summary {
+
+        grid-template-columns:
+            1fr 1px 1fr;
+
+    }
+
+
+    .command-summary-label:last-child {
+
+        display: none;
+
+    }
+
+
+    .command-summary-divider:last-of-type {
+
+        display: none;
+
+    }
+
+
+    .command-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        overflow-y: auto;
+
+    }
+
+
+    .command-footer > span {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .command-item {
+
+        transition: none;
+
+    }
 
 }

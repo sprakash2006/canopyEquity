@@ -4,10 +4,13 @@ import {
     Layers3,
     Satellite,
     Maximize2,
-    RefreshCw
+    RefreshCw,
+    MapPinned,
+    Activity
 } from "lucide-react";
 
 import GISMap from "../GISMap/GISMap";
+
 
 export default function MapCard() {
 
@@ -15,49 +18,107 @@ export default function MapCard() {
 
         <div className="map-card">
 
-            {/* ================= HEADER ================= */}
+            {/* =================================================
+                MAP HEADER
+            ================================================= */}
 
             <div className="map-header">
 
-                <div>
+                <div className="map-header-title">
 
-                    <h2>Interactive GIS Map</h2>
+                    <div className="map-title-icon">
 
-                    <p>
+                        <MapPinned
+                            size={17}
+                            strokeWidth={2}
+                        />
 
-                        AI Prediction • Satellite • Ward Boundaries
+                    </div>
 
-                    </p>
+
+                    <div>
+
+                        <h2>
+                            Interactive GIS Map
+                        </h2>
+
+                        <p>
+                            AI prediction · satellite imagery · spatial intelligence
+                        </p>
+
+                    </div>
 
                 </div>
 
+
+                {/* =================================================
+                    MAP ACTIONS
+                ================================================= */}
+
                 <div className="map-actions">
 
-                    <button>
+                    <button
+                        type="button"
+                        title="Layers"
+                        aria-label="Layers"
+                    >
 
-                        <Layers3 size={18}/>
+                        <Layers3
+                            size={16}
+                            strokeWidth={1.9}
+                        />
 
-                        Layers
-
-                    </button>
-
-                    <button>
-
-                        <Satellite size={18}/>
-
-                        Satellite
-
-                    </button>
-
-                    <button>
-
-                        <RefreshCw size={18}/>
+                        <span>
+                            Layers
+                        </span>
 
                     </button>
 
-                    <button>
 
-                        <Maximize2 size={18}/>
+                    <button
+                        type="button"
+                        title="Satellite"
+                        aria-label="Satellite"
+                    >
+
+                        <Satellite
+                            size={16}
+                            strokeWidth={1.9}
+                        />
+
+                        <span>
+                            Satellite
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        className="map-icon-button"
+                        title="Refresh map"
+                        aria-label="Refresh map"
+                    >
+
+                        <RefreshCw
+                            size={16}
+                            strokeWidth={1.9}
+                        />
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        className="map-icon-button"
+                        title="Fullscreen"
+                        aria-label="Fullscreen"
+                    >
+
+                        <Maximize2
+                            size={16}
+                            strokeWidth={1.9}
+                        />
 
                     </button>
 
@@ -65,7 +126,10 @@ export default function MapCard() {
 
             </div>
 
-            {/* ================= MAP ================= */}
+
+            {/* =================================================
+                MAP
+            ================================================= */}
 
             <div className="map-body">
 
@@ -73,39 +137,72 @@ export default function MapCard() {
 
             </div>
 
-            {/* ================= LEGEND ================= */}
 
-            <div className="legend">
+            {/* =================================================
+                MAP STATUS BAR
+            ================================================= */}
 
-                <div>
+            <div className="map-status-bar">
 
-                    <span className="green"></span>
 
-                    Dense Canopy
+                <div className="map-status-left">
+
+                    <div className="map-status-item">
+
+                        <span className="map-status-dot active" />
+
+                        <span>
+                            AI Prediction
+                        </span>
+
+                    </div>
+
+
+                    <div className="map-status-item">
+
+                        <span className="map-status-dot canopy" />
+
+                        <span>
+                            Canopy
+                        </span>
+
+                    </div>
+
+
+                    <div className="map-status-item">
+
+                        <span className="map-status-dot water" />
+
+                        <span>
+                            Water
+                        </span>
+
+                    </div>
+
+
+                    <div className="map-status-item">
+
+                        <span className="map-status-dot urban" />
+
+                        <span>
+                            Urban
+                        </span>
+
+                    </div>
 
                 </div>
 
-                <div>
 
-                    <span className="yellow"></span>
+                <div className="map-status-right">
 
-                    Sparse Vegetation
+                    <Activity
+                        size={13}
+                        strokeWidth={2}
+                    />
 
-                </div>
-
-                <div>
-
-                    <span className="blue"></span>
-
-                    Water
-
-                </div>
-
-                <div>
-
-                    <span className="gray"></span>
-
-                    Urban Area
+                    <span>
+                        Spatial layer active
+                    </span>
 
                 </div>
 

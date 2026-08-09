@@ -1,21 +1,361 @@
-.analytics{
+/* ============================================================
+   CANOPYAI — ANALYTICS
+   Professional White Dashboard
+   UI ONLY
+   ============================================================ */
 
-display:grid;
+.analytics {
 
-grid-template-columns:2fr 1fr;
+    width: 100%;
 
-gap:24px;
+    display: grid;
 
-margin-top:25px;
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(0, 1fr);
+
+    gap: 16px;
 
 }
 
-@media(max-width:1200px){
 
-.analytics{
+/* ============================================================
+   CHART CARD
+   ============================================================ */
 
-grid-template-columns:1fr;
+.analytics-chart-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow-xs);
+
+    overflow: hidden;
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease;
 
 }
+
+
+.analytics-chart-card:hover {
+
+    border-color: #d9e6dd;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.analytics-chart-header {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        15px 17px 12px;
+
+    border-bottom: 1px solid #eef1ef;
+
+}
+
+
+.analytics-eyebrow {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #15803d;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+
+}
+
+
+.analytics-chart-header h3 {
+
+    margin: 0;
+
+    color: #172018;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.015em;
+
+    line-height: 1.25;
+
+}
+
+
+.analytics-chart-header p {
+
+    margin: 4px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+
+}
+
+
+/* ============================================================
+   LIVE BADGE
+   ============================================================ */
+
+.analytics-chart-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 21px;
+
+    padding:
+        0 7px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 999px;
+
+    color: #15803d;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.06em;
+
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.analytics-chart-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #f8faf9;
+
+    border: 1px solid #edf1ee;
+
+    color: #15803d;
+
+    font-size: 17px;
+
+}
+
+
+/* ============================================================
+   CHART BODY
+   ============================================================ */
+
+.analytics-chart-body {
+
+    position: relative;
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding:
+        8px 12px 12px;
+
+    overflow: hidden;
+
+}
+
+
+/*
+   Existing chart components fill the available
+   analytics area without changing their logic.
+*/
+
+.analytics-chart-body > * {
+
+    width: 100%;
+
+    max-width: 100%;
+
+}
+
+
+/* ============================================================
+   PRIMARY CHART
+   ============================================================ */
+
+.analytics-primary {
+
+    min-height: 350px;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .analytics {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .analytics-chart-card,
+    .analytics-primary {
+
+        min-height: 320px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    .analytics {
+
+        gap: 12px;
+
+    }
+
+
+    .analytics-chart-card,
+    .analytics-primary {
+
+        min-height: 290px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .analytics-chart-header {
+
+        min-height: 65px;
+
+        padding:
+            13px 13px 10px;
+
+    }
+
+
+    .analytics-chart-header h3 {
+
+        font-size: 13px;
+
+    }
+
+
+    .analytics-chart-header p {
+
+        font-size: 8px;
+
+    }
+
+
+    .analytics-chart-body {
+
+        padding:
+            6px 8px 10px;
+
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .analytics-chart-header p {
+
+        display: none;
+
+    }
+
+
+    .analytics-chart-card,
+    .analytics-primary {
+
+        min-height: 270px;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .analytics-chart-card {
+
+        transition: none;
+
+    }
 
 }

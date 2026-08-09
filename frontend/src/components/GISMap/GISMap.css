@@ -1,136 +1,736 @@
 /* ==========================================================
-   CANOPY AI GIS MAP
-========================================================== */
+   CANOPYAI — GIS INTELLIGENCE MAP
+   WHITE / PROFESSIONAL THEME
+   UI ONLY — NO MAP LOGIC
+   ========================================================== */
 
-.gis-map{
 
-    width:100%;
+/* ==========================================================
+   MAP CONTAINER
+   ========================================================== */
 
-    height:calc(100vh - 120px);
+.gis-map-container {
+    position: relative;
 
-    border-radius:20px;
+    width: 100%;
+    height: 700px;
 
-    overflow:hidden;
+    min-height: 520px;
 
-    border:2px solid var(--border);
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,.10);
+        0 4px 14px rgba(15, 23, 42, 0.06),
+        0 1px 3px rgba(15, 23, 42, 0.04);
 
+    isolation: isolate;
 }
 
-/* ==========================================================
-   LEAFLET
-========================================================== */
 
-.leaflet-container{
+/* Support the older class name if used elsewhere */
 
-    width:100%;
+.gis-map {
+    position: relative;
 
-    height:100%;
+    width: 100%;
+    height: calc(100vh - 120px);
 
-    background:var(--bg-alt);
+    min-height: 520px;
 
-}
+    overflow: hidden;
 
-/* ==========================================================
-   CONTROLS
-========================================================== */
+    background: #ffffff;
 
-.leaflet-control{
+    border: 1px solid #e5e7eb;
 
-    border-radius:12px !important;
-
-    overflow:hidden;
+    border-radius: 18px;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,.12);
-
+        0 4px 14px rgba(15, 23, 42, 0.06),
+        0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
-.leaflet-control-layers{
-
-    background:var(--card) !important;
-
-    color:var(--text);
-
-}
-
-.leaflet-control-layers label{
-
-    color:var(--text);
-
-}
 
 /* ==========================================================
-   POPUP
-========================================================== */
+   LEAFLET MAP
+   ========================================================== */
 
-.leaflet-popup-content-wrapper{
+.gis-map-container .leaflet-container,
+.gis-map .leaflet-container {
 
-    border-radius:16px;
+    width: 100%;
+    height: 100%;
 
-    background:var(--card);
+    background: #f8fafc;
 
-    color:var(--text);
-
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 }
 
-.leaflet-popup-tip{
 
-    background:var(--card);
+/* Prevent ugly focus outline */
 
+.gis-map-container .leaflet-container:focus,
+.gis-map .leaflet-container:focus {
+    outline: none;
 }
 
-.leaflet-popup-content{
-
-    margin:16px;
-
-}
-
-.leaflet-popup-content h3{
-
-    margin-bottom:10px;
-
-    color:var(--brand-primary);
-
-}
 
 /* ==========================================================
-   SCROLL
-========================================================== */
+   LEAFLET CONTROL BASE
+   ========================================================== */
 
-.leaflet-container::-webkit-scrollbar{
+.gis-map-container .leaflet-control,
+.gis-map .leaflet-control {
 
-    width:8px;
+    border: 1px solid #e5e7eb !important;
 
-}
+    border-radius: 10px !important;
 
-.leaflet-container::-webkit-scrollbar-thumb{
+    overflow: hidden;
 
-    background:var(--border-strong);
+    background: #ffffff;
 
-    border-radius:10px;
-
-}
-
-.gis-map-container{
-
-    width:100%;
-
-    height:700px;
-
-    border-radius:20px;
-
-    overflow:hidden;
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.10);
 
 }
 
 
-.gis-map-container .leaflet-container{
+/* ==========================================================
+   ZOOM CONTROL
+   ========================================================== */
 
-    width:100%;
+.gis-map-container .leaflet-control-zoom,
+.gis-map .leaflet-control-zoom {
 
-    height:100%;
+    border: 1px solid #e5e7eb !important;
+
+    border-radius: 10px !important;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+}
+
+
+.gis-map-container .leaflet-control-zoom a,
+.gis-map .leaflet-control-zoom a {
+
+    width: 36px;
+    height: 36px;
+
+    line-height: 36px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    border: 0;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.gis-map-container .leaflet-control-zoom a:hover,
+.gis-map .leaflet-control-zoom a:hover {
+
+    background: #f0fdf4;
+
+    color: #15803d;
+}
+
+
+.gis-map-container .leaflet-control-zoom a:active,
+.gis-map .leaflet-control-zoom a:active {
+
+    background: #dcfce7;
+
+}
+
+
+/* ==========================================================
+   LAYER CONTROL
+   ========================================================== */
+
+.gis-map-container .leaflet-control-layers,
+.gis-map .leaflet-control-layers {
+
+    min-width: 190px;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.97) !important;
+
+    color: #172018 !important;
+
+    border: 1px solid #e5e7eb !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, 0.12);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* Layer control toggle button */
+
+.gis-map-container .leaflet-control-layers-toggle,
+.gis-map .leaflet-control-layers-toggle {
+
+    width: 38px;
+    height: 38px;
+
+    background-color: #ffffff;
+
+    border-radius: 9px;
+
+}
+
+
+/* Expanded layer control */
+
+.gis-map-container
+.leaflet-control-layers-expanded,
+.gis-map
+.leaflet-control-layers-expanded {
+
+    padding: 12px 14px;
+
+}
+
+
+/* Layer group */
+
+.gis-map-container
+.leaflet-control-layers-list,
+.gis-map
+.leaflet-control-layers-list {
+
+    margin: 0;
+
+}
+
+
+/* Layer labels */
+
+.gis-map-container
+.leaflet-control-layers label,
+.gis-map
+.leaflet-control-layers label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 30px;
+
+    padding: 5px 6px;
+
+    margin: 2px 0;
+
+    border-radius: 7px;
+
+    color: #334155 !important;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.gis-map-container
+.leaflet-control-layers label:hover,
+.gis-map
+.leaflet-control-layers label:hover {
+
+    background: #f0fdf4;
+
+    color: #15803d !important;
+}
+
+
+/* Radio / checkbox */
+
+.gis-map-container
+.leaflet-control-layers input,
+.gis-map
+.leaflet-control-layers input {
+
+    accent-color: #16a34a;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   SCALE CONTROL
+   ========================================================== */
+
+.gis-map-container .leaflet-control-scale,
+.gis-map .leaflet-control-scale {
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid #cbd5e1;
+
+    border-top: none;
+
+    padding: 2px 5px;
+
+    color: #475569;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ==========================================================
+   POPUPS
+   ========================================================== */
+
+.gis-map-container .leaflet-popup-content-wrapper,
+.gis-map .leaflet-popup-content-wrapper {
+
+    min-width: 220px;
+
+    background: #ffffff;
+
+    color: #172018;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.14);
+}
+
+
+.gis-map-container .leaflet-popup-tip,
+.gis-map .leaflet-popup-tip {
+
+    background: #ffffff;
+
+}
+
+
+.gis-map-container .leaflet-popup-content,
+.gis-map .leaflet-popup-content {
+
+    margin: 16px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+/* Popup heading */
+
+.gis-map-container .leaflet-popup-content h3,
+.gis-map .leaflet-popup-content h3 {
+
+    margin:
+
+        0 0 10px;
+
+    color: #166534;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+
+/* Popup strong text */
+
+.gis-map-container .leaflet-popup-content strong,
+.gis-map .leaflet-popup-content strong {
+
+    color: #172018;
+
+    font-weight: 700;
+}
+
+
+/* Popup close button */
+
+.gis-map-container .leaflet-popup-close-button,
+.gis-map .leaflet-popup-close-button {
+
+    width: 28px !important;
+    height: 28px !important;
+
+    top: 8px !important;
+    right: 8px !important;
+
+    color: #64748b !important;
+
+    font-size: 20px !important;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.gis-map-container
+.leaflet-popup-close-button:hover,
+.gis-map
+.leaflet-popup-close-button:hover {
+
+    background: #f1f5f9;
+
+    color: #166534 !important;
+}
+
+
+/* ==========================================================
+   MAP ATTRIBUTION
+   ========================================================== */
+
+.gis-map-container .leaflet-control-attribution,
+.gis-map .leaflet-control-attribution {
+
+    padding: 3px 7px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    color: #64748b;
+
+    border-top-left-radius: 6px;
+
+    font-size: 9px;
+}
+
+
+.gis-map-container
+.leaflet-control-attribution a,
+.gis-map
+.leaflet-control-attribution a {
+
+    color: #166534;
+
+}
+
+
+/* ==========================================================
+   MAP TOOLTIP
+   ========================================================== */
+
+.gis-map-container .leaflet-tooltip,
+.gis-map .leaflet-tooltip {
+
+    padding: 7px 10px;
+
+    background: #ffffff;
+
+    color: #172018;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.10);
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   PIXEL / RASTER VISUALIZATION
+   ========================================================== */
+
+/*
+   Keep the existing raster visually crisp.
+   This does NOT modify the raster logic.
+*/
+
+.impact-heatmap-image {
+
+    image-rendering: pixelated;
+
+    image-rendering: crisp-edges;
+}
+
+
+/* ==========================================================
+   MAP LOADING / EMPTY BACKGROUND
+   ========================================================== */
+
+.gis-map-container::before {
+
+    pointer-events: none;
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    z-index: 500;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+.gis-map-container .leaflet-container::-webkit-scrollbar,
+.gis-map .leaflet-container::-webkit-scrollbar {
+
+    width: 7px;
+
+    height: 7px;
+}
+
+
+.gis-map-container .leaflet-container::-webkit-scrollbar-track,
+.gis-map .leaflet-container::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.gis-map-container .leaflet-container::-webkit-scrollbar-thumb,
+.gis-map .leaflet-container::-webkit-scrollbar-thumb {
+
+    background: #cbd5e1;
+
+    border-radius: 999px;
+}
+
+
+.gis-map-container .leaflet-container::-webkit-scrollbar-thumb:hover,
+.gis-map .leaflet-container::-webkit-scrollbar-thumb:hover {
+
+    background: #94a3b8;
+}
+
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+   ========================================================== */
+
+@media (max-width: 1024px) {
+
+    .gis-map-container {
+
+        height: 620px;
+
+        min-height: 480px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .gis-map-container
+    .leaflet-control-layers,
+    .gis-map
+    .leaflet-control-layers {
+
+        min-width: 175px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE — MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .gis-map-container {
+
+        height: calc(100vh - 180px);
+
+        min-height: 440px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .gis-map {
+
+        height: calc(100vh - 160px);
+
+        min-height: 440px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .gis-map-container
+    .leaflet-control-layers,
+    .gis-map
+    .leaflet-control-layers {
+
+        min-width: 160px;
+
+        max-width: calc(100vw - 30px);
+
+        font-size: 11px;
+
+    }
+
+
+    .gis-map-container
+    .leaflet-control-layers label,
+    .gis-map
+    .leaflet-control-layers label {
+
+        min-height: 28px;
+
+        font-size: 11px;
+
+    }
+
+
+    .gis-map-container .leaflet-control-zoom a,
+    .gis-map .leaflet-control-zoom a {
+
+        width: 34px;
+
+        height: 34px;
+
+        line-height: 34px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .gis-map-container {
+
+        height: calc(100vh - 150px);
+
+        min-height: 400px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .gis-map-container
+    .leaflet-control-layers,
+    .gis-map
+    .leaflet-control-layers {
+
+        min-width: 145px;
+
+        padding: 7px;
+
+    }
+
+
+    .gis-map-container
+    .leaflet-control-layers-expanded,
+    .gis-map
+    .leaflet-control-layers-expanded {
+
+        padding: 9px;
+
+    }
+
+
+    .gis-map-container .leaflet-control-scale,
+    .gis-map .leaflet-control-scale {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+.gis-map-container
+.leaflet-control-zoom a:focus-visible,
+.gis-map-container
+.leaflet-control-layers label:focus-within {
+
+    outline: 2px solid #22c55e;
+
+    outline-offset: 2px;
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gis-map-container *,
+    .gis-map * {
+
+        transition: none !important;
+
+        animation: none !important;
+
+    }
 
 }

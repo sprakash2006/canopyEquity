@@ -242,18 +242,10 @@ export default function PredictionLayer(){
 
 
 
-                            const bounds =
-                                rasterLayer.getBounds();
-
-
-
-                            if(bounds){
-
-                                map.fitBounds(
-                                    bounds
-                                );
-
-                            }
+                            /* Do NOT fitBounds here — the raster's
+                               bounds may not match the current AOI
+                               (Delhi) and would jerk the whole map
+                               away.                                */
 
 
 

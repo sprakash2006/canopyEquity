@@ -1,83 +1,453 @@
-.legend{
+/* ==========================================================
+   CANOPYAI — GIS IMPACT LEGEND
+   WHITE PROFESSIONAL THEME
+   UI ONLY
+   ========================================================== */
 
-    position:absolute;
 
-    bottom:30px;
+.legend {
 
-    left:20px;
+    position: absolute;
 
-    z-index:999;
+    left: 14px;
 
-    background:var(--card);
+    bottom: 22px;
 
-    color:var(--text);
+    z-index: 1000;
 
-    padding:18px;
+    width: 180px;
 
-    border-radius:16px;
+    padding: 10px 12px;
 
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    background: rgba(255, 255, 255, 0.97);
 
-    min-width:170px;
+    border: 1px solid #e2e8f0;
 
-    border:1px solid var(--border);
+    border-radius: 14px;
 
-}
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.12),
+        0 2px 6px rgba(15, 23, 42, 0.05);
 
-.legend h3{
+    backdrop-filter: blur(10px);
 
-    margin-bottom:12px;
+    color: #172018;
 
-}
-
-.legend div{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-bottom:8px;
-
-}
-
-.legend span{
-
-    width:18px;
-
-    height:18px;
-
-    border-radius:4px;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
 }
 
-.veryhigh{
 
-    background:var(--risk-veryhigh);
+/* ==========================================================
+   HEADER
+   ========================================================== */
 
-}
+.legend-header {
 
-.high{
+    display: flex;
 
-    background:var(--risk-high);
+    align-items: flex-start;
 
-}
+    justify-content: space-between;
 
-.medium{
-
-    background:var(--risk-moderate);
-
-}
-
-.low{
-
-    background:#7fa38f;
+    gap: 12px;
 
 }
 
-.verylow{
 
-    background:var(--risk-low);
+.legend-kicker {
+
+    margin-bottom: 3px;
+
+    color: #64748b;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+
+}
+
+
+.legend-title {
+
+    margin: 0;
+
+    color: #172018;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}
+
+
+.legend-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 38px;
+
+    height: 18px;
+
+    padding: 0 6px;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 6px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.legend-description {
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ==========================================================
+   GRADIENT
+   ========================================================== */
+
+.legend-gradient-wrap {
+
+    margin-top: 9px;
+
+}
+
+
+.legend-gradient {
+
+    width: 100%;
+
+    height: 7px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #22c55e 0%,
+            #84cc16 25%,
+            #facc15 50%,
+            #f97316 75%,
+            #dc2626 100%
+        );
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ==========================================================
+   SCALE
+   ========================================================== */
+
+.legend-scale {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   PRIORITY LABELS
+   ========================================================== */
+
+.legend-endcaps {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    padding-top: 7px;
+
+    border-top: 1px solid #f1f5f9;
+
+}
+
+
+.legend-priority {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+.legend-priority.high {
+
+    color: #334155;
+
+}
+
+
+/* ==========================================================
+   DOTS
+   ========================================================== */
+
+.legend-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    border-radius: 50%;
+
+}
+
+
+.legend-dot.low {
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 197, 94, 0.12);
+
+}
+
+
+.legend-dot.high {
+
+    background: #dc2626;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, 0.10);
+
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.legend-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 8px;
+
+    padding-top: 7px;
+
+    border-top: 1px solid #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+}
+
+
+.legend-status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    flex: 0 0 6px;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.10);
+
+}
+
+
+/* ==========================================================
+   HOVER
+   ========================================================== */
+
+.legend {
+
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.legend:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(15, 23, 42, 0.15),
+        0 3px 8px rgba(15, 23, 42, 0.05);
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .legend {
+
+        left: 12px;
+
+        bottom: 18px;
+
+        width: 220px;
+
+        padding: 13px 14px;
+
+    }
+
+
+    .legend-title {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .legend {
+
+        left: 10px;
+
+        bottom: 12px;
+
+        width: 195px;
+
+        padding: 11px 12px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .legend-kicker {
+
+        font-size: 7px;
+
+    }
+
+
+    .legend-title {
+
+        font-size: 13px;
+
+    }
+
+
+    .legend-description {
+
+        font-size: 9px;
+
+    }
+
+
+    .legend-badge {
+
+        min-width: 42px;
+
+        height: 22px;
+
+        font-size: 9px;
+
+    }
+
+
+    .legend-scale {
+
+        font-size: 8px;
+
+    }
+
+
+    .legend-priority {
+
+        font-size: 8px;
+
+    }
+
+
+    .legend-footer {
+
+        font-size: 8px;
+
+    }
 
 }

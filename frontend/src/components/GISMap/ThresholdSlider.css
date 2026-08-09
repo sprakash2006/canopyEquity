@@ -1,0 +1,247 @@
+.threshold-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+
+    width: 200px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+    padding: 16px 18px;
+
+    color: var(--text);
+    font-family: var(--font-sans);
+}
+
+
+.threshold-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.threshold-header h4 {
+    margin: 0;
+    font-size: var(--fs-body);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.threshold-header .material-symbols-outlined {
+    font-size: 20px;
+    color: var(--brand-primary);
+}
+
+
+/* ================================
+   Vertical thermometer scale
+================================ */
+
+.thermometer {
+    display: grid;
+    grid-template-columns: 22px auto 1fr;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.thermometer-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    font-size: var(--fs-caption-sm);
+    color: var(--text-muted);
+    padding: 4px 0;
+    line-height: 1;
+}
+
+
+/* -------- Bar wrapper (holds the gradient + slider) -------- */
+
+.thermometer-bar-wrap {
+    position: relative;
+    width: 26px;
+    height: 200px;
+}
+
+.thermometer-bar {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        to top,
+        #3e6752 0%,
+        #7fa38f 25%,
+        #eab552 50%,
+        #f48c24 75%,
+        #ba1a1a 100%
+    );
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -------- The slider, rotated -90deg to run vertically -------- */
+
+.thermometer-slider {
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* Draw at natural (horizontal) width matching bar height,
+       then rotate to become vertical */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 26px;
+
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center center;
+
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide native track so only the gradient bar shows through */
+.thermometer-slider::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 26px;
+    border: none;
+}
+.thermometer-slider::-moz-range-track {
+    background: transparent;
+    height: 26px;
+    border: none;
+}
+
+/* Custom thumb — a rounded pill that sits ON the bar */
+.thermometer-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 34px;
+    border-radius: 6px;
+    background: var(--card);
+    border: 2px solid var(--brand-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    margin-top: -4px;
+}
+
+.thermometer-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.05);
+}
+
+.thermometer-slider::-moz-range-thumb {
+    width: 14px;
+    height: 34px;
+    border-radius: 6px;
+    background: var(--card);
+    border: 2px solid var(--brand-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+/* -------- Right-side caption (High / Low + value) -------- */
+
+.thermometer-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: var(--fs-caption-sm);
+    color: var(--text-muted);
+    line-height: 1;
+}
+
+.thermometer-caption .high {
+    color: var(--risk-veryhigh);
+    font-weight: 600;
+}
+
+.thermometer-caption .low {
+    color: var(--risk-low);
+    font-weight: 600;
+}
+
+.thermometer-caption .value {
+    padding: 4px 8px;
+    background: var(--bg-alt);
+    border-radius: 999px;
+    text-align: center;
+    color: var(--text);
+    font-size: var(--fs-caption);
+    align-self: center;
+    white-space: nowrap;
+}
+
+.thermometer-caption .value strong {
+    font-size: var(--fs-body-sm);
+    color: var(--brand-primary);
+    margin-left: 2px;
+}
+
+
+/* ================================
+   Opacity — plain horizontal
+================================ */
+
+.opacity-row {
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.opacity-row label {
+    display: block;
+    font-size: var(--fs-caption);
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.opacity-row label strong {
+    color: var(--text);
+    font-size: var(--fs-body-sm);
+    margin-left: 4px;
+}
+
+.opacity-row input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: var(--bg-alt);
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+}
+
+.opacity-row input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    border: 2px solid var(--card);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.opacity-row input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    border: 2px solid var(--card);
+    cursor: pointer;
+}
